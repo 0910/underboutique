@@ -1,0 +1,39 @@
+.container.content
+  .designer
+    .row-fluid
+      .span3.bio
+        %h4 #{@designer.name}
+        .scroll-pane(style="width:210px; height:360px; margin-top:15px;")
+          %p #{@designer.bio}
+      .span9.large-img
+        .item
+          .ph
+            - @designer.images.each do |image|
+              = image_tag(image.file.url(:large)) 
+    .row-fluid.products-container
+      .span3
+        .filters
+          %h4 filtrar por producto
+          %ul#filters
+            %li
+              %a.active(href="#all") todos
+            %li
+              %a(href="#ropa") ropa
+            %li
+              %a(href="#zapatos") zapatos
+            %li
+              %a(href="#accesorios") accesorios
+      .span9
+        .row-fluid
+          .span12
+            .products
+              %ul#list
+                -@designer.products.last(8).each do |product|
+                  %li.span3{:class => "#{product.category}"}
+                    .slide
+                      .item
+                        = render 'shared/product_link', product: product
+                        %h5 #{product.category}
+%script{:type => "text/javascript"}
+  $('.scroll-pane').jScrollPane();
+  $('#list').filterable();

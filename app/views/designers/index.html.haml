@@ -1,0 +1,8 @@
+.container.content
+  .row-fluid
+    - @designers.sort_by{|d| d.name}.group_by{|d| d.name[0].upcase}.each do |letter, members|
+      .span4
+        %h1= letter
+        - members.each do |designer|
+          .designer
+            = link_to(designer.name, designer_path(designer.id), class: 'simple-btn')

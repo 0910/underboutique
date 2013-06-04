@@ -1,0 +1,27 @@
+site_name: Underboutique
+site_url: 23.21.234.59
+
+mysql:
+  database: underboutique
+  username: underboutique
+  host: "reserved.cn8l9fnr4if0.us-east-1.rds.amazonaws.com"
+  password: 7WjVlgbCybpBnaH
+
+s3:
+  aws_access_key_id: AKIAI2FGWWUPYNQ3HWGA
+  aws_secret_access_key: v701FLZG1ZCP4xRLwn0yBlTnbu7FcvXbHfUtB60J
+  bucket_name: underboutique
+
+exception_email:
+  sender: exception-notifier@example.com
+  recipients: ed@example.com, edd@example.com, eddy@example.com
+  prefix: '[Exception]'
+
+smtp:
+  address: smtp.gmail.com
+  user_name: example@gmail.com
+  password: ultrasecret
+  port: 587
+  authentication: plain
+  enable_starttls_auto: true
+

@@ -1,0 +1,26 @@
+.container
+  .row-fluid
+    .span12
+      .order-by
+        %h5 ordenar por precio:
+        %a.selected alto 
+        %p /
+        %a bajo
+      .order-by-center
+        %h5 ver como:
+        %a.selected vista producto 
+        %p /
+        %a vista conjunto
+      .paginator
+        %h5 pagina 1 de 3
+        %a anterior
+        %p /
+        %a siguiente
+  .row-fluid
+    .span12
+      .products.news
+        .carousel-inner
+          -@products.reverse.each do |product|
+            .span2
+              .item
+                = render 'shared/product_link', product: product

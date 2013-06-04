@@ -1,0 +1,12 @@
+.ph
+  - if image = product.images.first
+    = link_to(product_path(product.id)) do
+      = image_tag image.file.url(:large)
+      .over
+        %h4.more ver mas
+.info
+  .background 
+  %p 
+    = product.name
+  .precio 
+    %p #{product.price}$ 
