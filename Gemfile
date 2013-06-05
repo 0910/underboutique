@@ -65,8 +65,8 @@ gem "bootstrap-sass", '~> 2.1.0'
 gem "haml"
 gem "jquery-rails"
 gem "email_validator"
-gem "exception_notification", :git => "git://github.com/smartinez87/exception_notification.git"
-gem "nubis_rails_boilerplate", :git => "git://github.com/nubis/nubis_rails_boilerplate.git"
+gem 'exception_notification', git: 'git://github.com/smartinez87/exception_notification.git'
+#gem 'nubis_rails_boilerplate', git: 'git://github.com/nubis/nubis_rails_boilerplate.git'
 gem "simple_form"
 gem "activeadmin"
 gem 'aws-sdk'
