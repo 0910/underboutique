@@ -27,7 +27,7 @@
         %a.control.active
         %a.control
         %a.control
-  .row-fluid.margin20
+  .row-fluid.margin20.nuevas
     .span12
       .boxtitle
         %h5 Nuevas Campañas
@@ -43,12 +43,11 @@
         %h5 Novedades
     .span12.novedadesbox
       .novedades
-        .carousel-inner
-          -@products.last(15).each do |product|
-            .span2
-              .slide
-                .item
-                  = render 'shared/product_link', product: product
+        -@products.last(15).each do |product|
+          .span2
+            .slide
+              .item
+                = render 'shared/product_link', product: product
 
         .row-fluid
           .span12
