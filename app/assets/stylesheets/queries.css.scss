@@ -37,14 +37,13 @@
   }
 }
  
-@media (min-width: 768px) and (max-width: 979px) {}
- 
-
-@media (max-width: 767px) {
+@media (max-device-width: 768px)and(orientation: portrait) {
   .box{
+    .span9{
+      width: 100%;
+    }
     .span3{
-      max-height: 0px;
-      visibility:hidden;
+      display:none;
     }
   }
   .novedadesbox{
@@ -75,29 +74,23 @@
     }
   }
   .topdesigners{
-    max-height: 0px;
-    visibility:hidden;
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .topdesigners{
-      max-height: 0px;
-      visibility:hidden;
+    display: none;
     }
     #myCarousel{
     }
   .box{
       .span3{
-        max-height: 0px;
-        max-width: 0px;
-        visibility:hidden;
+        display: none;
       }
     }
     .nuevas{
-      max-height: 0px;
-      max-width: 0px;
-      visibility:hidden;
+      display: none;
     }
     .novedadesbox{
       .span3{
@@ -109,7 +102,7 @@
           height: 40px;
         }
         .info{
-            visibility: hidden;
+            display: none;
           }
       }
     }
