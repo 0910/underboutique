@@ -24,16 +24,14 @@
             %li
               %a(href="#accesorios") accesorios
       .span9
-        .row-fluid
-          .span12
-            .products
-              %ul#list
-                -@designer.products.last(8).each do |product|
-                  %li.span3{:class => "#{product.category}"}
-                    .slide
-                      .item
-                        = render 'shared/product_link', product: product
-                        %h5 #{product.category}
+        .row-fluid.products
+          %ul#list
+            -@designer.products.last(8).each do |product|
+              %li.span3{:class => "#{product.category}"}
+                .slide
+                  .item
+                    = render 'shared/product_link', product: product
+                    %h5 #{product.category}
 %script{:type => "text/javascript"}
   $('.scroll-pane').jScrollPane();
   $('#list').filterable();

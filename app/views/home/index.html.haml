@@ -1,5 +1,5 @@
-.container.content
-  .row-fluid.box
+.container
+  .row-fluid
     .span9
       #myCarousel.carousel
         .carousel-inner
@@ -16,42 +16,38 @@
                         .btn-group
                           %button.btn  
                             %p Ver Colección
-    .span3
-      -@designers.last(3).each do |designers| 
-        .item-content
-          %h5 #{designers.name} 
-          %p #{designers.bio.truncate(180)}
+    .row-fluid.fondo
+      .span3
+        -@designers.last(3).each do |designers| 
+          .item-content
+            %h5 #{designers.name} 
+            %p #{designers.bio.truncate(180)}
+  
   .row-fluid
-    .span12
-      .control-nav.control-carousel
-        %a.control.active
-        %a.control
-        %a.control
-  .row-fluid.margin20.nuevas
-    .span12
-      .boxtitle
-        %h5 Nuevas Campañas
-    .span12.novedadesbox
+    .control-nav.control-carousel
+      %a.control.active
+      %a.control
+      %a.control
+  
+  .row-fluid
+    .boxtitle
+      %h5 Nuevas Campañas
+    .row-fluid.nuevas
       -@products.last(4).each do |product|
         .span3
           .item
             = render 'shared/product_link', product: product
 
-  .row-fluid.margin20
-    .span12
-      .boxtitle
-        %h5 Novedades
-    .span12.novedadesbox
-      .novedades
-        -@products.last(15).each do |product|
-          .span2
-            .slide
-              .item
-                = render 'shared/product_link', product: product
-
-        .row-fluid
-          .span12
-            .control-nav.control-novedades
+  .row-fluid
+    .boxtitle
+      %h5 Novedades
+    .row-fluid.products
+      -@products.last(15).each do |product|
+        .span3{:class => "#{product.category}"}
+          .item
+            = render 'shared/product_link', product: product
+            %h5 #{product.category}
+  
   .row-fluid.topdesigners
     .span3
       %ul.title
@@ -76,9 +72,8 @@
         -@designers.last(5).each_with_index do |designer, index|
           .row-fluid
             - designer.products.last(5).each do |product|
-              .span12
-                .item
-                  .ph
-                    -if image = product.images.first
-                      = link_to(image_tag(image.file.url(:large)), product_path(product.id))
+              .item
+                .ph
+                  -if image = product.images.first
+                    = link_to(image_tag(image.file.url(:large)), product_path(product.id))
                 .control-nav
