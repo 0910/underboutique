@@ -1,6 +1,6 @@
 .container
   .row-fluid
-    .span9
+    .span9.full
       #myCarousel.carousel
         .carousel-inner
           -@designers.last(3).each do |designer|
@@ -16,12 +16,11 @@
                         .btn-group
                           %button.btn  
                             %p Ver Colección
-    .row-fluid.fondo
-      .span3
-        -@designers.last(3).each do |designers| 
-          .item-content
-            %h5 #{designers.name} 
-            %p #{designers.bio.truncate(180)}
+    .span3.full
+      -@designers.last(3).each do |designers| 
+        .item-content
+          %h5 #{designers.name} 
+          %p #{designers.bio.truncate(180)}
   
   .row-fluid
     .control-nav.control-carousel
@@ -30,7 +29,7 @@
       %a.control
   
   .row-fluid
-    .boxtitle
+    .boxtitle.first
       %h5 Nuevas Campañas
     .row-fluid.nuevas
       -@products.last(4).each do |product|
@@ -39,9 +38,9 @@
             = render 'shared/product_link', product: product
 
   .row-fluid
-    .boxtitle
+    .boxtitle.first
       %h5 Novedades
-    .row-fluid.products
+    .row-fluid.novedades
       -@products.last(15).each do |product|
         .span3{:class => "#{product.category}"}
           .item
