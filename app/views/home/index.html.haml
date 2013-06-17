@@ -31,7 +31,7 @@
   .row-fluid
     .boxtitle.first
       %h5 Nuevas Campañas
-    .row-fluid.nuevas
+    .row-fluid
       -@products.last(4).each do |product|
         .span3
           .item
@@ -40,7 +40,7 @@
   .row-fluid
     .boxtitle.first
       %h5 Novedades
-    .row-fluid.novedades
+    .row-fluid
       -@products.last(15).each do |product|
         .span3{:class => "#{product.category}"}
           .item
