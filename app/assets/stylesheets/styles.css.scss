@@ -388,7 +388,6 @@ HOME
     }
   }
   .span3 .full{
-    width: 25.6%;
   }
   .carousel{
     overflow: hidden;
@@ -398,6 +397,8 @@ HOME
     height: 111px;
     padding: 20px 25px 25px 25px;
     border-bottom:1px solid #ddd;
+    background: url(sprites1.png);
+    background-position: 0 -510px;
     h5{
       color: #666;
       line-height: 2em;
@@ -456,7 +457,6 @@ HOME
   .row-fluid .nuevas{
     margin: 5px 0 0 0;
     .span3{
-      width: 25%;
       .item{
         position: relative;
         cursor: pointer;
@@ -484,7 +484,6 @@ HOME
     margin: 5px 0 0 0;
     .span3{
       margin-top: 1px;
-      width: 20%;
       .item{
         position: relative;
         cursor: pointer;
@@ -538,7 +537,7 @@ HOME
     margin-top: 0px;
     }
     .boxProduct{
-      height: 297px;
+      height: 287px;
       overflow: hidden;
       }   
   }
@@ -557,6 +556,7 @@ HOME
     display: block;
     background: #CCC;
     overflow: hidden;
+    height: 331px;
     .carousel-inner{
       .slide{
         .item{
