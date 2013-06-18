@@ -27,7 +27,7 @@
         .row-fluid.products
           %ul#list
             -@designer.products.last(8).each do |product|
-              %li.span3{:class => "#{product.category}"}
+              %li.span4{:class => "#{product.category}"}
                 .slide
                   .item
                     = render 'shared/product_link', product: product

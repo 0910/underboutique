@@ -85,12 +85,13 @@
         }
       }
     }
-     .span9 .products .span3{
-      width: 25%;
+     .span9 .products .span4{
+      width: 33.333%;
       height:285px;
       .item{
         height:285px;
         background: #FFF;
+        overflow: hidden;
         h4{
           margin:0px;
         }
@@ -106,8 +107,7 @@
           margin:0px;
         }
         img{
-          width: 80%;
-          margin:10%;
+          width: 100%;
         }
       }
     }

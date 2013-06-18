@@ -19,18 +19,16 @@
    .span9.full{
     	width: 100%;
    	}
-   .row-fluid .nuevas .span3{
+   .row-fluid .span3{
  			width: 90%;
- 			margin-left: 5%;
  			.item{
  				.ph{
  					height: 600px;
  				}	
  			}
  		}
-  .row-fluid .novedades .span3{
+  .row-fluid .span4{
  	  width: 90%;
- 	  margin-left: 5%;
  	  display: inline-block;
  		.item{
  				.ph{
@@ -43,9 +41,45 @@
  		font-size: 3.5em;
  	}
  	.info{
-  	font-size: 3em;
+  	font-size: 2.5em;
   }
   .row-fluid.topdesigners{
   	display: none;
+  }
+  .designers{
+    .span3.bio{
+      display: none;
+    }
+    .span9.large-img{
+      width: 100%;
+    }
+    .products-container {
+      width: 100%;
+      .span3{
+        float: none;
+        width: 100%;
+        .filters h4{
+          width: 100%;
+          font-size: 4em;
+          padding-bottom: 30px;
+        }
+        .filters li{
+        margin: 40px auto;
+        font-size: 3.5em;
+
+        }
+      }
+      .span9{
+        .products{
+          .span4{
+          width: 100%; 
+          height: 600px;           
+          }
+        }
+      }
+    }
+  }
+  #footer{
+    margin: 0;
   }
 }
