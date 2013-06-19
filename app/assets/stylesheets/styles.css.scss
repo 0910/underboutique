@@ -271,10 +271,13 @@ HEADER
       width:98%;
     }
     input[type="submit"]{
-      width:40%;
+      width:22%;
     }
   }
   .login-box{
+    background-size: 100% 500%;
+    background-position: 0px 370px;
+    height: 210px;
     label{
       padding: 1.3em 0 0;
       width: 30%;
@@ -299,6 +302,12 @@ HEADER
       }
     }
   }
+  .search-box{
+      height: 50px;
+      .btn{
+        margin: 1.5em 0 0 2em;
+      }
+    }
 }
 
 @mixin select($section){

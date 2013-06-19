@@ -87,11 +87,15 @@
     }
      .span9 .products .span4{
       width: 33.333%;
-      height:285px;
       .item{
-        height:285px;
         background: #FFF;
         overflow: hidden;
+        .ph{
+          height: 250px;
+          overflow: hidden;
+        }
+
+
         h4{
           margin:0px;
         }
@@ -99,9 +103,6 @@
           p{
             margin:0px;
           }
-        }
-        ph{
-          height:250px;
         }
         a{
           margin:0px;

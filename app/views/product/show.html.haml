@@ -15,7 +15,7 @@
               .ph
                 = image_tag(image.file.url(:small))
                 .over
-    .span6.info
+    .span6.prod
       %h2 #{@product.name}
       %h5.description #{@product.description.truncate(50)}
       %p.price #{@product.price}$
@@ -32,12 +32,12 @@
           = submit_tag 'agregar a carrito', class: 'btn-large'
           -# %button.btn-large(type='button')agregar wishlist
   .row-fluid
-    .span12
-      .products.news
-        .carousel-inner
-          -@products.reverse.each do |product|
-            .span2
-              .item
-                = render 'shared/product_link', product: product
+    .boxtitle.first
+      %h5 Novedades
+    .row-fluid
+      -@products.reverse.each do |product|
+        .span3
+          .item
+            = render 'shared/product_link', product: product
 :javascript
   $('#size').ddslick();
