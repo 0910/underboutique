@@ -2,6 +2,8 @@
 require "helpers"
 
 ActiveAdmin.register Designer do
+  menu :label => 'Designer'
+  
   # The designer can only edit himself, so there's no point in having a list of designers
   # to choose from.
   before_filter proc{

@@ -158,3 +158,4 @@ class ActiveAdmin::Comment
   attr_accessible :resource_type, :resource_id, :body, as: :admin
 end
 
+

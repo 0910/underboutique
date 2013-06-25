@@ -33,9 +33,10 @@ ActiveAdmin.register Product do
   end
   
   form_with_images do |f|
-    f.input :name, as: :string
-    f.input :price, as: :number
-    f.input :description
+    f.input :name, :label => "Nombre",as: :string
+    f.input :price, :label => "Precio", as: :number
+    f.input :description, :label => "Descripcion"
+    f.input :type_of_product, :label => "Tipo de producto",:as => :select, :collection => ["Ropa", "Zapatos","Accesorios"], :include_blank => false
     if f.object.designer.nil?
       f.input :designer 
     end
