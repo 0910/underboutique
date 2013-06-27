@@ -12,12 +12,37 @@
 }
 
 @media (max-device-width: 480px) {
+  .container{
+    width: 1024px;
+  }
+  .btn-group{
+    left: 0;
+    white-space: normal;
+    z-index: 4;
+    .btn{
+    height: 87px;
+    background: url("sprites1.png");
+    background-position: 69px -2px; 
+    background-size:10px 1051px;
+    width: 110%;
+    font-size: 48px;
+    white-space: normal;
+    }
 
+  }
+
+  .navbar{
+    margin-top: 400px;
+    z-index: 3;
+  }
   .fondo .span3.full{
     	display: none;
     }
    .span9.full{
-    	width: 100%;
+    	width: 107%;
+      margin: 0;
+      margin-top: 100px;
+
    	}
    .row-fluid .span3{
  			width: 90%;
