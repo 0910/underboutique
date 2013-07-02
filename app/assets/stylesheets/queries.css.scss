@@ -13,33 +13,35 @@
 
 @media (max-device-width: 480px) {
   .container{
-    width: 1024px;
+    width: 100%;
   }
   .btn-group{
     left: 0;
     white-space: normal;
     z-index: 4;
+    width: 100%;
     .btn{
-    height: 87px;
-    background: url("sprites1.png");
+    float: none;
+    height: 120px;
     background-position: 69px -2px; 
     background-size:10px 1051px;
-    width: 110%;
+    border: none;
+    width: 44%;
     font-size: 48px;
     white-space: normal;
+    margin: 0;
     }
-
   }
-
   .navbar{
-    margin-top: 400px;
+    margin-top: 300px;
+    margin-bottom: 100px;
     z-index: 3;
   }
   .fondo .span3.full{
     	display: none;
     }
    .span9.full{
-    	width: 107%;
+    	width: 100%;
       margin: 0;
       margin-top: 100px;
 
@@ -104,6 +106,79 @@
       }
     }
   }
+  .designers .container{
+    width: 105%;
+    float: none;
+  }
+  .designers.index .span4{
+    width:100%;
+    border-bottom: solid 1px;
+    margin-top: 8em;
+    padding-bottom: 2.5em;
+    
+  }
+  .designers.index .content h1 {
+  
+    font-size: 10em;
+    width: 25%;
+    float: left;
+    margin-top: 0px;
+
+  }
+  .designers.index .content .designer{
+    font-size: 4em;
+    width: 75%;
+  } 
+
+  .designers.show .designer .products-container .filters h4{
+    width: 100%;
+  }
+.designers.show .designer .products-container .span3{
+  width: 100%;
+}
+.designers.show .designer .span9{
+  width: 100%;
+}
+.designers.show .designer .span9 .products .span4 {
+  width: 50%;
+  float: left;
+}
+.designers.show .designer .span9 .products{
+  width: 100%;
+  float: none;
+}
+.product.show .detail .span6{
+  width: 100%;
+  .ph > img{
+    width: 100%;
+  }
+}
+.product.show .detail .span6.prod{
+  font-size: 3em;
+  h2{
+    line-height: 1em;
+  }
+  h5{
+    line-height: 1em;
+    margin: 50px 0;
+  }
+  p{
+    line-height: 1em;
+  }
+}
+.product.show .detail .prod .selects label{
+    width: 60%;
+}
+.add-to-cart {
+    overflow: visible;
+}
+.product.show .detail .prod .btn-large{
+  width: 500px;
+  height: 200px;
+  background-image: none;
+  background-color: black;
+  font-size: 30px;
+}
   #footer{
     margin: 0;
   }
