@@ -1,3 +1,25 @@
 // Place all the styles related to the Sale controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.sale.index{
+	.container{
+		.span12{
+			width: 100%;
+		}
+		.span4{
+			width: 25%;
+			.item{
+				background: none repeat scroll 0 0 #FFFFFF;
+    		overflow: hidden;
+			.ph{
+				height: 250px;
+    		overflow: hidden;
+			}	
+			}
+			
+
+		}
+	}
+}

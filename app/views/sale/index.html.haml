@@ -31,6 +31,6 @@
     .products.news
       .carousel-inner
         -@products.reverse.each do |product|
-          .span2
+          .span4
             .item
               = render 'shared/product_link', product: product
