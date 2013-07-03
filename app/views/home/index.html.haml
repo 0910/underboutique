@@ -1,31 +1,23 @@
 .row-fluid.fondo
   .span9.full
-    #myCarousel.carousel
-      .carousel-inner
-        -@designers.last(3).each do |designer|
-          .slide
-            .item
-              .ph
-                - if image = designer.images.first
-                  = link_to(designer_path(designer.id)) do
-                    = image_tag image.file.url(:large)
-                    .over
-                    .info
-                      %h1 Summer collection
-                      .btn-group.swift
-                        %button.btn  
-                          %p Ver Colección
-  .span3.full
+    %ul#mainslider.bxslider
+      -@designers.last(3).each do |designer|
+        %li.item
+          .ph
+            - if image = designer.images.first
+              = link_to(designer_path(designer.id)) do
+                = image_tag image.file.url(:large)
+                .over
+                .info
+                  %h1 #{designer.name} 
+                  .btn-group.swift
+                    %button.btn  
+                      %p Ver Colección
+  .span3.full#bx-pager
     -@designers.last(3).each do |designers| 
-      .item-content
-        %h5 #{designers.name} 
+      %a.item-content{ :href => "#",:data => {'slide-index' => '0'} }
+        %h5 #{designers.name}
         %p #{designers.bio.truncate(180)}
-
-.row-fluid
-  .control-nav.control-carousel
-    %a.control.active
-    %a.control
-    %a.control
 
 .row-fluid
   .boxtitle.first

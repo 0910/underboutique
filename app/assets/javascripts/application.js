@@ -17,7 +17,6 @@
 //= require jquery.easing.1.3
 //= require moveSliderToHorizontal
 //= require moveSliderToVertical
-//= require carousel
 //= require filterable
 //= require jquery.ddslick
 //= require jquery.jscrollpane.min
