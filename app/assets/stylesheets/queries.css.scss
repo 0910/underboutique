@@ -13,32 +13,18 @@
   .container{
     width:920px;
   }
+  
+  
+
 }
 @media (max-width: 768px){
   .container{
     width:100%;
   }
 }
-@media (max-width: 480px){
+@media (max-device-width: 480px){
   .container{
     width: 100%;
-  }
-  .btn-group{
-    left: 0;
-    white-space: normal;
-    z-index: 4;
-    width: 100%;
-    .btn{
-      float: none;
-      height: 120px;
-      background-position: 69px -2px; 
-      background-size:10px 1051px;
-      border: none;
-      width: 44%;
-      font-size: 48px;
-      white-space: normal;
-      margin: 0;
-    }
   }
   .navbar{
     margin-top: 300px;
