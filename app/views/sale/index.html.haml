@@ -1,36 +1,35 @@
-.container
-  .row-fluid
-    .span9
-      #myCarousel.carousel
-        .carousel-inner
-          -@designers.last(3).each do |designer|
-            .slide
-              .item
-                .ph
-                  - if image = designer.images.first
-                    = link_to(designer_path(designer.id)) do
-                      = image_tag image.file.url(:large)
-                      .over
-                      .info
-                        %h1 Summer collection
-                        .btn-group 
-                          %p.btn en todas las compras que superen los $1000  
-    .span3
-      -@designers.last(3).each do |designers| 
-        .item-content
-          %h5 #{designers.name} 
-          %p #{designers.bio.truncate(180)}
-  .row-fluid
-    .span12
-      .control-nav.control-carousel
-        %a.control.active
-        %a.control
-        %a.control
-  .row-fluid
-  .span12
-    .products.news
+.row-fluid
+  .span9
+    #myCarousel.carousel
       .carousel-inner
-        -@products.reverse.each do |product|
-          .span4
+        -@designers.last(3).each do |designer|
+          .slide
             .item
-              = render 'shared/product_link', product: product
+              .ph
+                - if image = designer.images.first
+                  = link_to(designer_path(designer.id)) do
+                    = image_tag image.file.url(:large)
+                    .over
+                    .info
+                      %h1 Summer collection
+                      .btn-group 
+                        %p.btn en todas las compras que superen los $1000  
+  .span3
+    -@designers.last(3).each do |designers| 
+      .item-content
+        %h5 #{designers.name} 
+        %p #{designers.bio.truncate(180)}
+.row-fluid
+  .span12
+    .control-nav.control-carousel
+      %a.control.active
+      %a.control
+      %a.control
+.row-fluid
+.span12
+  .products.news
+    .carousel-inner
+      -@products.reverse.each do |product|
+        .span4
+          .item
+            = render 'shared/product_link', product: product

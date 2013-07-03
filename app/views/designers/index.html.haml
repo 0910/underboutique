@@ -1,4 +1,4 @@
-.container.content
+.content
   .row-fluid
     - @designers.sort_by{|d| d.name}.group_by{|d| d.name[0].upcase}.each do |letter, members|
       .span4

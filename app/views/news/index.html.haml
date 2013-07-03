@@ -1,22 +1,21 @@
-.container
-  .row-fluid
-    .order-by
-      %h5 ordenar por precio:
-      %a.selected alto 
-      %p /
-      %a bajo
-    .order-by-center
-      %h5 ver como:
-      %a.selected vista producto 
-      %p /
-      %a vista conjunto
-    .paginator
-      %h5 pagina 1 de 3
-      %a anterior
-      %p /
-      %a siguiente
-  .row-fluid
-    -@products.reverse.each do |product|
-      .span3
-        .item
-          = render 'shared/product_link', product: product
+.row-fluid
+  .order-by
+    %h5 ordenar por precio:
+    %a.selected alto 
+    %p /
+    %a bajo
+  .order-by-center
+    %h5 ver como:
+    %a.selected vista producto 
+    %p /
+    %a vista conjunto
+  .paginator
+    %h5 pagina 1 de 3
+    %a anterior
+    %p /
+    %a siguiente
+.row-fluid
+  -@products.reverse.each do |product|
+    .span3
+      .item
+        = render 'shared/product_link', product: product

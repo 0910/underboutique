@@ -1,78 +1,77 @@
-.container
-  .row-fluid.fondo
-    .span9.full
-      #myCarousel.carousel
-        .carousel-inner
-          -@designers.last(3).each do |designer|
+.row-fluid.fondo
+  .span9.full
+    #myCarousel.carousel
+      .carousel-inner
+        -@designers.last(3).each do |designer|
+          .slide
+            .item
+              .ph
+                - if image = designer.images.first
+                  = link_to(designer_path(designer.id)) do
+                    = image_tag image.file.url(:large)
+                    .over
+                    .info
+                      %h1 Summer collection
+                      .btn-group
+                        %button.btn  
+                          %p Ver Colección
+  .span3.full
+    -@designers.last(3).each do |designers| 
+      .item-content
+        %h5 #{designers.name} 
+        %p #{designers.bio.truncate(180)}
+
+.row-fluid
+  .control-nav.control-carousel
+    %a.control.active
+    %a.control
+    %a.control
+
+.row-fluid
+  .boxtitle.first
+    %h5 Nuevas Campañas
+  .row-fluid
+    -@products.last(4).each do |product|
+      .span3
+        .item
+          = render 'shared/product_link', product: product
+
+.row-fluid
+  .boxtitle.first
+    %h5 Novedades
+  .row-fluid
+    -@products.last(15).each do |product|
+      .span3{:class => "#{product.category}"}
+        .item
+          = render 'shared/product_link', product: product
+          %h5 #{product.category}
+
+.row-fluid.topdesigners
+  .span3
+    %ul.title
+      %li
+        %h4 top 5 diseñadores
+    %ul.top-designers
+      -@designers.last(5).each do |designer|
+        %li
+          = link_to(designer.name, designer_path(designer), value: designer.id)
+  .span6
+    #myCarouselTopDesigner
+      .carousel-inner
+        -@designers.last(5).each do |designer|
+          -if image = designer.images.first
             .slide
               .item
-                .ph
-                  - if image = designer.images.first
-                    = link_to(designer_path(designer.id)) do
-                      = image_tag image.file.url(:large)
-                      .over
-                      .info
-                        %h1 Summer collection
-                        .btn-group
-                          %button.btn  
-                            %p Ver Colección
-    .span3.full
-      -@designers.last(3).each do |designers| 
-        .item-content
-          %h5 #{designers.name} 
-          %p #{designers.bio.truncate(180)}
-  
-  .row-fluid
-    .control-nav.control-carousel
-      %a.control.active
-      %a.control
-      %a.control
-  
-  .row-fluid
-    .boxtitle.first
-      %h5 Nuevas Campañas
-    .row-fluid
-      -@products.last(4).each do |product|
-        .span3
-          .item
-            = render 'shared/product_link', product: product
-
-  .row-fluid
-    .boxtitle.first
-      %h5 Novedades
-    .row-fluid
-      -@products.last(15).each do |product|
-        .span3{:class => "#{product.category}"}
-          .item
-            = render 'shared/product_link', product: product
-            %h5 #{product.category}
-  
-  .row-fluid.topdesigners
-    .span3
-      %ul.title
-        %li
-          %h4 top 5 diseñadores
-      %ul.top-designers
-        -@designers.last(5).each do |designer|
-          %li
-            = link_to(designer.name, designer_path(designer), value: designer.id)
-    .span6
-      #myCarouselTopDesigner
-        .carousel-inner
-          -@designers.last(5).each do |designer|
-            -if image = designer.images.first
-              .slide
-                .item
-                  = image_tag(image.file.url(:large))
-    .span3.top-designers
-      .boxtitle
-        %h5 colección
-      .boxProduct
-        -@designers.last(5).each_with_index do |designer, index|
-          .row-fluid
-            - designer.products.last(5).each do |product|
-              .item
-                .ph
-                  -if image = product.images.first
-                    = link_to(image_tag(image.file.url(:large)), product_path(product.id))
-                .control-nav
+                = image_tag(image.file.url(:large))
+  .span3.top-designers
+    .boxtitle
+      %h5 colección
+    .boxProduct
+      -@designers.last(5).each_with_index do |designer, index|
+        .row-fluid
+          - designer.products.last(5).each do |product|
+            .item
+              .ph
+                -if image = product.images.first
+                  = link_to(image_tag(image.file.url(:large)), product_path(product.id))
+              .control-nav

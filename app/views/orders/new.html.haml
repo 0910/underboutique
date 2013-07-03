@@ -1,18 +1,17 @@
-.container
-  .order.span3
-    %h1 Checkout
-    
-    = semantic_form_for @order, url: order_path do |f|
-      = f.inputs name: 'Details' do
-        = f.input :name, as: :string
-        = f.input :email, as: :email
-        = f.input :country, as: :string
-        = f.input :province, as: :string
-        = f.input :city, as: :string
-        = f.input :postal_code, as: :string
-        = f.input :address
-    
-      = f.actions do
-        = f.action :submit, :as => :button
-        = f.action :cancel, :as => :link
+.order.span3
+  %h1 Checkout
+  
+  = semantic_form_for @order, url: order_path do |f|
+    = f.inputs name: 'Details' do
+      = f.input :name, as: :string
+      = f.input :email, as: :email
+      = f.input :country, as: :string
+      = f.input :province, as: :string
+      = f.input :city, as: :string
+      = f.input :postal_code, as: :string
+      = f.input :address
+  
+    = f.actions do
+      = f.action :submit, :as => :button
+      = f.action :cancel, :as => :link
 

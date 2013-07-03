@@ -1,43 +1,42 @@
-.container
-  .row-fluid.detail
-    .span6
-      #myCarousel
-        .carousel-inner
+.row-fluid.detail
+  .span6
+    #myCarousel
+      .carousel-inner
+        .item
+          .ph
+            - @product.images.each do |image|
+              = image_tag(image.file.url(:large))
+            .over
+              .more
+      .thumbs
+        - @product.images.each do |image|
           .item
             .ph
-              - @product.images.each do |image|
-                = image_tag(image.file.url(:large))
+              = image_tag(image.file.url(:small))
               .over
-                .more
-        .thumbs
-          - @product.images.each do |image|
-            .item
-              .ph
-                = image_tag(image.file.url(:small))
-                .over
-    .span6.prod
-      %h2 #{@product.name}
-      %h5.description #{@product.description.truncate(50)}
-      %p.price #{@product.price}$
-      %p #{@product.description}
-      = form_tag(cart_items_path, class: "add-to-cart") do
-        = hidden_field_tag 'product_id', @product.id
-        .formitem.selects
-          %label Cantidad
-          %input(type="number" name="quantity" value="1" min="1" max="1000")
-        .formitem.selects
-          %label Talle
-          = select_tag "size", options_from_collection_for_select(@product.sizes, :id, :label)
-        .btn-group
-          = submit_tag 'agregar a carrito', class: 'btn-large'
-          -# %button.btn-large(type='button')agregar wishlist
+  .span6.prod
+    %h2 #{@product.name}
+    %h5.description #{@product.description.truncate(50)}
+    %p.price #{@product.price}$
+    %p #{@product.description}
+    = form_tag(cart_items_path, class: "add-to-cart") do
+      = hidden_field_tag 'product_id', @product.id
+      .formitem.selects
+        %label Cantidad
+        %input(type="number" name="quantity" value="1" min="1" max="1000")
+      .formitem.selects
+        %label Talle
+        = select_tag "size", options_from_collection_for_select(@product.sizes, :id, :label)
+      .btn-group
+        = submit_tag 'agregar a carrito', class: 'btn-large'
+        -# %button.btn-large(type='button')agregar wishlist
+.row-fluid
+  .boxtitle.first
+    %h5 Novedades
   .row-fluid
-    .boxtitle.first
-      %h5 Novedades
-    .row-fluid
-      -@products.reverse.each do |product|
-        .span3
-          .item
-            = render 'shared/product_link', product: product
+    -@products.reverse.each do |product|
+      .span3
+        .item
+          = render 'shared/product_link', product: product
 :javascript
-  $('#size').ddslick();
+$('#size').ddslick();

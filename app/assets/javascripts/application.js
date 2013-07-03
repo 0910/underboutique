@@ -25,3 +25,4 @@
 //= require over
 //= require product
 //= require magic
+//= require bootstrap

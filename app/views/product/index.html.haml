@@ -1,9 +1,8 @@
-.container
-  .row-fluid
-    .span12
-      .products.news
-        .carousel-inner
-          -@products.reverse.each do |product|
-            .span2
-              .item
-                = render 'shared/product_link', product: product
+.row-fluid
+  .span12
+    .products.news
+      .carousel-inner
+        -@products.reverse.each do |product|
+          .span2
+            .item
+              = render 'shared/product_link', product: product
