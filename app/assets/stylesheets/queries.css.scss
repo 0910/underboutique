@@ -9,6 +9,11 @@
     width: 75%;
   }
 }
+@media (max-width: 960px){
+  .container{
+    width:920px;
+  }
+}
 @media (max-width: 768px){
   .container{
     width:100%;
