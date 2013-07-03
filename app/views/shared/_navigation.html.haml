@@ -1,0 +1,20 @@
+.navbar
+  .navbar-inner.navbar-inverse.navbar-fixed-top
+    %button.btn.btn-navbar.collapsed(type="button" data-toggle="collapse" data-target=".nav-collapse")
+    = link_to "UNDERBOUTIQUE", {:controller => "home", :action => "index"}, :class => "brand" 
+    .nav-collapse.collapse
+      %ul.nav
+        %li
+          = link_to('novedades', "#")
+        %li
+          = link_to('diseñadores',"#" )
+        %li
+          = link_to('ropa', "#")
+        %li
+          = link_to('zapatos', "#")
+        %li
+          = link_to('accesorios', "#")
+        %li
+          = link_to('gifts', "#")
+        %li
+          = link_to('the journal', "#")

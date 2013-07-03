@@ -7,7 +7,7 @@
     = csrf_meta_tags
   %body(class="#{controller_name} #{action_name} no-space")
     
-    = render 'shared/nav'
+    = render 'shared/navigation'
 
     - if flash[:alert]
       %div= flash[:alert]
