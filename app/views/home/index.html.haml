@@ -12,7 +12,7 @@
                     .over
                     .info
                       %h1 Summer collection
-                      .btn-group
+                      .btn-group.swift
                         %button.btn  
                           %p Ver Colección
   .span3.full
@@ -31,20 +31,22 @@
   .boxtitle.first
     %h5 Nuevas Campañas
   .row-fluid
-    -@products.last(4).each do |product|
-      .span3
-        .item
-          = render 'shared/product_link', product: product
+    .slider_campaigns
+      -(@products.last(4)*4).each do |product|
+        .span3
+          .item
+            = render 'shared/product_link', product: product
 
 .row-fluid
   .boxtitle.first
     %h5 Novedades
   .row-fluid
-    -@products.last(15).each do |product|
-      .span3{:class => "#{product.category}"}
-        .item
-          = render 'shared/product_link', product: product
-          %h5 #{product.category}
+    .slider_products
+      -(@products.last(15)*4).each do |product|
+        .span3{:class => "#{product.category}"}
+          .item
+            = render 'shared/product_link', product: product
+            %h5 #{product.category}
 
 .row-fluid.topdesigners
   .span3

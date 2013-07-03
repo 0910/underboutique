@@ -1,4 +1,10 @@
 $(function(){
+  $('.slider_campaigns, .slider_products').bxSlider({
+    slideWidth: 256,
+    minSlides: 4,
+    maxSlides: 4,
+    slideMargin: 0
+  });
   homeCarousel();
   homeNews();
   // Agregamos los controles a top designer de acuerdo a la cantidad de imagenes

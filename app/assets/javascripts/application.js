@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bxslider
 //= require_tree .
 //= require jquery.easing.1.3
 //= require moveSliderToHorizontal

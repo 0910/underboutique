@@ -1,0 +1,36 @@
+.bx-wrapper{
+	margin:0;
+	width:100%;
+	.bx-viewport {
+	    background: none;
+	    border: 0px;
+	    box-shadow: none;
+	    left: 0;
+	}
+	.span3{
+		margin:0px;
+	}
+	.bx-prev{
+		left:20px;
+	}
+	.bx-next{
+		right:20px;
+	}
+	.bx-pager.bx-default-pager a{
+		width:7px;
+		height:7px;
+	}
+	.bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active{
+		background:#819395;
+	}
+	.bx-pager.bx-default-pager a{
+		background:#bbb;
+	}
+	.bx-caption{
+		bottom:40px;
+		background:none;
+		span{
+			font: 30px 'HelveticaNeueLTStd-UltLtEx';
+		}
+	}	
+}
