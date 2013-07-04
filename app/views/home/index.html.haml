@@ -14,10 +14,10 @@
                     %button.btn  
                       %p Ver Colección
   .span3.full#bx-pager
-    -@designers.last(3).each do |designers| 
-      %a.item-content{ :href => "#",:data => {'slide-index' => '0'} }
-        %h5 #{designers.name}
-        %p #{designers.bio.truncate(180)}
+    -@designers.last(3).each_with_index do |designer, index| 
+      %a.item-content{ :href => "#",:data => {'slide-index' => index} }
+        %h5 #{designer.name}
+        %p #{designer.bio.truncate(180)}
 
 .row-fluid
   .boxtitle.first
@@ -42,30 +42,23 @@
 
 .row-fluid.topdesigners
   .span3
-    %ul.title
-      %li
-        %h4 top 5 diseñadores
-    %ul.top-designers
-      -@designers.last(5).each do |designer|
+    %ul#topdesigners.nav.nav-tabs
+      -@designers.last(5).each_with_index do |designer,index|
         %li
-          = link_to(designer.name, designer_path(designer), value: designer.id)
+          %a{ :href => "#top#{index}",:data => {'toogle' => "tab"} } #{designer.name}
   .span6
-    #myCarouselTopDesigner
-      .carousel-inner
-        -@designers.last(5).each do |designer|
+    .tab-content
+      -@designers.last(5).each_with_index do |designer, index|
+        .tab-pane.fade.in{:id => "top#{index}"}
           -if image = designer.images.first
             .slide
               .item
                 = image_tag(image.file.url(:large))
-  .span3.top-designers
-    .boxtitle
-      %h5 colección
-    .boxProduct
-      -@designers.last(5).each_with_index do |designer, index|
-        .row-fluid
-          - designer.products.last(5).each do |product|
-            .item
-              .ph
-                -if image = product.images.first
-                  = link_to(image_tag(image.file.url(:large)), product_path(product.id))
-              .control-nav
+  .span3
+    -@designers.last(5).each_with_index do |designer, index|
+      .row-fluid
+        - designer.products.last(5).each do |product|
+          .item
+            .ph
+              -if image = product.images.first
+                = link_to(image_tag(image.file.url(:large)), product_path(product.id))

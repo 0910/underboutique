@@ -9,4 +9,8 @@ $(function(){
     maxSlides: 4,
     slideMargin: 0
   });
+  $('#topdesigners a').click(function(e) {
+    e.preventDefault();
+    $(this).tab('show');
+  });
 });
