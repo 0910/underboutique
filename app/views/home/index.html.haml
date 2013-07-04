@@ -49,16 +49,15 @@
   .span6
     .tab-content
       -@designers.last(5).each_with_index do |designer, index|
-        .tab-pane.fade.in{:id => "top#{index}"}
+        .tab-pane{:id => "top#{index}"}
           -if image = designer.images.first
             .slide
               .item
                 = image_tag(image.file.url(:large))
   .span3
     -@designers.last(5).each_with_index do |designer, index|
-      .row-fluid
-        - designer.products.last(5).each do |product|
-          .item
-            .ph
-              -if image = product.images.first
-                = link_to(image_tag(image.file.url(:large)), product_path(product.id))
+      - designer.products.last(5).each do |product|
+        .item
+          .ph
+            -if image = product.images.first
+              = link_to(image_tag(image.file.url(:large)), product_path(product.id))
