@@ -10,10 +10,14 @@
   }
 }
 @media (max-width: 979px){
-  
+  .container{
+    width:920px;
+  } 
   #header .navbar .nav {
-    float: left;
-    font-size: 1.4em;
+    float: none;
+    width: 100%;
+    text-align: center;
+
   }
 }
 
@@ -29,157 +33,107 @@
   .container{
     width:100%;
   }
+  #header .navbar .nav {
+    float: left;
+    font-size: 1.4em;
+
+  }
 
 
 }
-@media (max-width: 480px){
+@media only screen and (max-device-width: 480px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .container{
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
   }
-  .navbar{
-    margin-top: 300px;
-    margin-bottom: 100px;
-    z-index: 3;
+  .bx-wrapper #mainslider .item {
+    height: 170px;
   }
-  .fondo .span3.full{
-    	display: none;
-    }
-   .span9.full{
-    	width: 100%;
-      margin: 0;
-      margin-top: 100px;
-
-   	}
-   .row-fluid .span3{
- 			width: 90%;
- 			.item{
- 				.ph{
- 					height: 600px;
- 				}	
- 			}
- 		}
-  .row-fluid .span4{
- 	  width: 90%;
- 	  display: inline-block;
- 		.item{
-			.ph{
-				height: 600px;
-			}	
-		}
- 	}
- 	.boxtitle.first{
- 		margin-top: 120px;
- 		font-size: 3.5em;
- 	}
- 	.info{
-  	font-size: 2.5em;
-  }
-  .row-fluid.topdesigners{
-  	display: none;
-  }
-  .designers{
-    .span3 .bio{
-      display: none;
-    }
-    .span9.large-img{
-      width: 100%;
-    }
-    .products-container {
-      width: 100%;
-      .span3{
-        float: none;
-        width: 100%;
-        .filters h4{
-          width: 100%;
-          font-size: 4em;
-          padding-bottom: 30px;
-        }
-        .filters li{
-        margin: 40px auto;
-        font-size: 3.5em;
-        }
-      }
-      .span9{
-        .products{
-          .span4{
-          width: 100%; 
-          height: 600px;           
-          }
-        }
-      }
-    }
-  }
-  .designers .container{
-    width: 105%;
-    float: none;
-  }
-  .designers .index .span4{
-    width:100%;
-    border-bottom: solid 1px;
-    margin-top: 8em;
-    padding-bottom: 2.5em;
-    
-  }
-  .designers .index .content h1 {
-    font-size: 10em;
-    width: 25%;
-    float: left;
-    margin-top: 0px;
-  }
-  .designers .index .content .designer{
-    font-size: 4em;
-    width: 75%;
-  } 
-  .designers .show .designer .products-container .filters h4{
-    width: 100%;
-  }
-  .designers .show .designer .products-container .span3{
-    width: 100%;
-  }
-  .designers .show .designer .span9{
-    width: 100%;
-  }
-  .designers .show .designer .span9 .products .span4 {
-    width: 50%;
-    float: left;
-  }
-  .designers .show .designer .span9 .products{
-    width: 100%;
-    float: none;
-  }
-  .product .show .detail .span6{
-    width: 100%;
-    .ph > img{
-      width: 100%;
-    }
-  }
-  .product .show .detail .span6 .prod{
-    font-size: 3em;
-    h2{
-      line-height: 1em;
-    }
-    h5{
-      line-height: 1em;
-      margin: 50px 0;
-    }
-    p{
-      line-height: 1em;
-    }
-  }
-  .product .show .detail .prod .selects label{
-      width: 60%;
-  }
-  .add-to-cart {
-      overflow: visible;
-  }
-  .product.show .detail .prod .btn-large{
-    width: 500px;
-    height: 200px;
-    background-image: none;
-    background-color: black;
-    font-size: 30px;
-  }
-  #footer{
+  #header .navbar .brand {
     margin: 0;
+  }
+  #header .navbar .btn-navbar {
+    position: relative;
+    right: 0;
+    top: 0px;
+  }
+  .btn-group{
+    margin-bottom: 25px;
+  }
+  .navbar-inner .btn.btn-navbar{
+     margin: 0;
+  }
+  .info > p {
+    width: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .row-fluid .span3 .item .ph {
+    height: 100px;
+    overflow: hidden;
+  }
+  .bx-wrapper .bx-controls-direction a {
+    margin-top: -20px;
+  }
+  .bx-viewport{
+    height: auto;
+  }
+
+  .fondo .span3.full{
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .container{
+    width: 420px;
+    margin: 0 auto;
+  }
+  .bx-wrapper #mainslider .item {
+    height: 170px;
+  }
+  #header .navbar .brand {
+    margin: 0;
+  }
+  #header .navbar .btn-navbar {
+    position: relative;
+    right: 0;
+    top: 0px;
+  }
+  .btn-group{
+    margin-bottom: 25px;
+    float: none;
+    width: 100%;
+  }
+  .navbar-inner .btn.btn-navbar{
+     margin: 0;
+  }
+  .info > p {
+    width: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .row-fluid .span3 .item .ph {
+    height: 100px;
+    overflow: hidden;
+  }
+  .bx-wrapper .bx-controls-direction a {
+    margin-top: -20px;
+  }
+  .bx-viewport{
+    height: auto;
+  }
+
+  .fondo .span3.full{
+    display: none;
   }
 }

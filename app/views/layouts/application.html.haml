@@ -6,34 +6,34 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body(class="#{controller_name} #{action_name} no-space")
-    .container
-      .btn-group
-        - if current_admin_user
-          .btn
-            = link_to('logout', destroy_admin_user_session_path, method: 'delete')
-        - else
-          .btn.login  
-            %a Iniciar sesión
+    .btn-group
+      - if current_admin_user
         .btn
-          = link_to('Registrarse', new_admin_user_registration_path)
-        .btn.search 
-          %a Buscar
-        .btn 
-          = link_to 'cart', cart_items_path
-      .search-box
-        %form
-          %input(type='text')
-          %input(class='btn' type='submit' value='buscar')
-      .login-box.span3
-        = form_for(AdminUser.new, as: :admin_user, url: session_path(:admin_user)) do |f|
-          = f.label :email
-          = f.email_field :email
-          = f.label :password
-          = f.password_field :password
-          = f.hidden_field :remember_me, value: 1
-          .btns
-            = f.submit 'iniciar sesión', class: 'btn'
-            = link_to 'olvidó su contraseña', new_password_path(:admin_user), class: 'btn'  
+          = link_to('logout', destroy_admin_user_session_path, method: 'delete')
+      - else
+        .btn.login  
+          %a Iniciar sesión
+      .btn
+        = link_to('Registrarse', new_admin_user_registration_path)
+      .btn.search 
+        %a Buscar
+      .btn 
+        = link_to 'cart', cart_items_path
+    .search-box
+      %form
+        %input(type='text')
+        %input(class='btn' type='submit' value='buscar')
+    .login-box.span3
+      = form_for(AdminUser.new, as: :admin_user, url: session_path(:admin_user)) do |f|
+        = f.label :email
+        = f.email_field :email
+        = f.label :password
+        = f.password_field :password
+        = f.hidden_field :remember_me, value: 1
+        .btns
+          = f.submit 'iniciar sesión', class: 'btn'
+          = link_to 'olvidó su contraseña', new_password_path(:admin_user), class: 'btn'  
+    .container
       = render 'shared/navigation'
 
       - if flash[:alert]
