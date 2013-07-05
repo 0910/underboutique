@@ -69,7 +69,7 @@ gem "email_validator"
 gem 'exception_notification', git: 'git://github.com/smartinez87/exception_notification.git'
 #gem 'nubis_rails_boilerplate', git: 'git://github.com/nubis/nubis_rails_boilerplate.git'
 gem "simple_form"
-gem "activeadmin"
+gem "activeadmin", "0.5.0"
 gem 'aws-sdk'
 gem 'paperclip', '~>3.4.2'
 
