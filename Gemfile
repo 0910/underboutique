@@ -71,7 +71,7 @@ gem 'exception_notification', git: 'git://github.com/smartinez87/exception_notif
 gem "simple_form"
 gem "activeadmin"
 gem 'aws-sdk'
-gem 'paperclip', '3.2.0'
+gem 'paperclip', '~>3.4.2'
 
 gem "formtastic", "~> 2.2"
 gem "formtastic-plus-bootstrap", git: "git://github.com/antage/formtastic-plus-bootstrap.git"
