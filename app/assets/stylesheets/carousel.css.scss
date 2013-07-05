@@ -81,5 +81,62 @@
 	.item-content{
 		float:left;
 		margin:0;
+	    height: 111px;
+	    padding: 20px 25px 25px 25px;
+	    border-bottom:1px solid #ddd;
+	    background: url(sprites1.png);
+	    background-position: 0 -510px;
+	    h5{
+	      color: #666;
+	      line-height: 2em;
+	      margin: 0 0 10px;
+	      border-bottom: 1px solid #666;
+	    }
+	    p{
+	      height:80px;
+	      overflow:hidden;
+	    }
+	}
+	.selected,
+	.item-content:hover{
+	    background: url(sprites.png);
+	    background-position: 0 -320px;
+	    color: #666;
+	    cursor: pointer;
+	}
+	.item-content:last-child{
+		border-bottom:none;
 	}	
+}
+.topdesigners{
+	.span3{
+		margin-top:0px;
+	}
+	.ph{
+		height:285px;
+	}
+}
+.nav-tabs{
+	li{
+		width:100%;
+		height:69px;
+		border-radius:0px;
+		background: url(sprites1.png);
+		background-position: 0 -510px;
+		a{
+			background:none;
+			border:0px;
+			border-radius:0px;
+			margin:0px;
+			padding:24px;
+		}
+	}
+	li:hover, li.active, li.active:hover{
+		background-position:0 -400px;
+		a{
+			background:none;
+			border:0px;
+			border-radius:0px;
+		}
+	}
 }

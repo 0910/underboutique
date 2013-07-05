@@ -42,23 +42,28 @@
             %h5 #{product.category}
 
 .row-fluid.topdesigners
+  .boxtitle.first
+    %h5 Top 10 Diseñadores
   .span3
     %ul#topdesigners.nav.nav-tabs
       -@designers.last(5).each_with_index do |designer,index|
         %li
           %a{ :href => "#top#{index}",:data => {'toogle' => "tab"} } #{designer.name}
-  .span6
-    .tab-content
-      -@designers.last(5).each_with_index do |designer, index|
-        .tab-pane{:id => "top#{index}"}
+  .tab-content
+    -@designers.last(5).each_with_index do |designer, index|
+      .tab-pane{:id => "top#{index}"}
+        .span6
           -if image = designer.images.first
             .slide
               .item
                 = image_tag(image.file.url(:large))
-  .span3
-    -@designers.last(5).each_with_index do |designer, index|
-      - designer.products.last(5).each do |product|
-        .item
-          .ph
-            -if image = product.images.first
-              = link_to(image_tag(image.file.url(:large)), product_path(product.id))
+        .span3
+          .boxtitle
+            %h5 Colección
+          -@designers.last(5).each_with_index do |designer, index|
+            .slider_top5(style="height:250px;")
+              - (designer.products.last(5)*4).each do |product|
+                .item
+                  .ph
+                    -if image = product.images.first
+                      = link_to(image_tag(image.file.url(:large)), product_path(product.id))
