@@ -62,7 +62,7 @@ gem "settingslogic"
 gem "unicorn"
 gem "capistrano"
 gem "bxslider-rails"
-gem "bootstrap-sass", '~> 2.1.0'
+gem "bootstrap-sass"
 gem "haml"
 gem "jquery-rails"
 gem "email_validator"
