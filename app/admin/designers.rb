@@ -24,7 +24,18 @@ ActiveAdmin.register Designer do
   end
 
   form_with_images("Imágenes de portada") do |f|
-    f.input :name, as: :string
-    f.input :bio
+    f.inputs :name => "Datos de la marca" do
+      f.input :name, as: :string, :label => "Nombre de la marca"
+      f.input :bio
+    end
+    
+    f.inputs :name => "Datos administrativos" do
+      f.input :nombre
+      f.input :direccion, :label => "Dirección"
+      f.input :telefono, :label => "Teléfono"
+      f.input :cuit, :label => "CUIT / CUIL", hint: "Por ejemplo: CUIT 20-22333444-6"
+      f.input :horario_entrega, :label => "Horarios de entrega", hint: "Por ejemplo 10 a 18."
+      f.input :situacion_fiscal, :label => "Situación fiscal", hint: "Situación fiscal (monotributo o resp inscr, etc)."
+    end
   end
 end
