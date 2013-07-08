@@ -20,7 +20,6 @@
     float: none;
     width: 100%;
     text-align: center;
-
   }
 }
 
@@ -28,9 +27,6 @@
   .container{
     width:920px;
   }
-  
-  
-
 }
 @media (max-width: 768px){
   .container{
@@ -39,60 +35,6 @@
   #header .navbar .nav {
     float: left;
     font-size: 1.4em;
-
-  }
-
-
-}
-@media only screen and (max-device-width: 480px) {
-  body {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .container{
-    width: 80%;
-    margin: 0 auto;
-  }
-  .bx-wrapper #mainslider .item {
-    height: 170px;
-  }
-  .login-box.span3 .search-box{
-    position: relative; 
-      }
-
-  #header .navbar .brand {
-    margin: 0;
-  }
-  #header .navbar .btn-navbar {
-    position: relative;
-    right: 0;
-    top: 0px;
-  }
-  .btn-group{
-    margin-bottom: 25px;
-  }
-  .navbar-inner .btn.btn-navbar{
-     margin: 0;
-  }
-  .info > p {
-    width: 40px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .row-fluid .span3 .item .ph {
-    height: 100px;
-    overflow: hidden;
-  }
-  .bx-wrapper .bx-controls-direction a {
-    margin-top: -20px;
-  }
-  .bx-viewport{
-    height: auto;
-  }
-
-  .fondo .span3.full{
-    display: none;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -127,8 +69,8 @@
     .navbar{
       margin-top: 20px;
     }
-  #header .navbar .nav{
-    font-size: 1em;
+  .nav > li {
+    font-size: 0.75em;
   }
   }
   #header .navbar .brand {
@@ -143,7 +85,6 @@
     margin-bottom: 0px;
     float: none;
     width: 100%;
-
   }
   .navbar-inner .btn.btn-navbar{
      margin: 0;
@@ -164,7 +105,6 @@
   .bx-viewport{
     height: auto;
   }
-
   .fondo .span3.full{
     display: none;
   }
