@@ -82,3 +82,14 @@ body.edit{
     }
   }
 }
+
+body.active_admin form fieldset > ol > li fieldset ol {
+  padding: 5% 1%;
+  width: 100%;
+  li{
+    padding: 5px 0;
+    label{
+      width: 19%;
+    }
+  }
+}

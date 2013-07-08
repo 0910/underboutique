@@ -19,7 +19,8 @@ group :assets do
 end
 gem 'sass-rails',   '~> 3.2.3'
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.3.0'
+
 gem 'jquery-ui-rails'
 
 # To use ActiveModel has_secure_password
@@ -62,16 +63,15 @@ gem "settingslogic"
 gem "unicorn"
 gem "capistrano"
 gem "bxslider-rails"
-gem "bootstrap-sass", '~> 2.1.0'
+gem "bootstrap-sass"
 gem "haml"
-gem "jquery-rails"
 gem "email_validator"
 gem 'exception_notification', git: 'git://github.com/smartinez87/exception_notification.git'
 #gem 'nubis_rails_boilerplate', git: 'git://github.com/nubis/nubis_rails_boilerplate.git'
 gem "simple_form"
-gem "activeadmin"
+gem "activeadmin", "0.5.0"
 gem 'aws-sdk'
-gem 'paperclip', '3.2.0'
+gem 'paperclip', '~>3.4.2'
 
 gem "formtastic", "~> 2.2"
 gem "formtastic-plus-bootstrap", git: "git://github.com/antage/formtastic-plus-bootstrap.git"

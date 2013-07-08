@@ -1,5 +1,6 @@
 UnderBoutique::Application.routes.draw do
 
+  root to: 'home#index'
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, controllers: {
@@ -29,7 +30,6 @@ UnderBoutique::Application.routes.draw do
     end
   end
 
-  root to: 'home#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
