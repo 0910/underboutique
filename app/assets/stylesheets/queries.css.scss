@@ -124,6 +124,12 @@
   #header{
     margin-bottom: 25px;
     margin-top: 0;
+    .navbar{
+      margin-top: 20px;
+    }
+  #header .navbar .nav{
+    font-size: 1em;
+  }
   }
   #header .navbar .brand {
     margin: 0;
