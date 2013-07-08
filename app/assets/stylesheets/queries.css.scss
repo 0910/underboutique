@@ -56,10 +56,10 @@
   .bx-wrapper #mainslider .item {
     height: 170px;
   }
-  .login-box, .search-box{
+  .login-box.span3 .search-box{
     position: relative; 
-    top: 10px;
-  }
+      }
+
   #header .navbar .brand {
     margin: 0;
   }
@@ -107,6 +107,24 @@
   .bx-wrapper #mainslider .item {
     height: 170px;
   }
+  .login-box, .search-box{
+    position: relative;
+    top: 0;
+    margin-bottom: 20px;
+  }
+  .search-box{
+    float: none;
+    .btn{
+      margin: 1.7em 0 0 0.3em;
+    }
+    input[type="text"]{
+      margin: 0.8em 0 0 1em;
+    }
+  }
+  #header{
+    margin-bottom: 25px;
+    margin-top: 0;
+  }
   #header .navbar .brand {
     margin: 0;
   }
@@ -116,9 +134,10 @@
     top: 0px;
   }
   .btn-group{
-    margin-bottom: 25px;
+    margin-bottom: 0px;
     float: none;
     width: 100%;
+
   }
   .navbar-inner .btn.btn-navbar{
      margin: 0;
