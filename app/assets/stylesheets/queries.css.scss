@@ -53,6 +53,10 @@
   .bx-wrapper #mainslider .item {
     height: 170px;
   }
+  .login-box, .search-box{
+    position: relative; 
+    top: 10px;
+  }
   #header .navbar .brand {
     margin: 0;
   }
