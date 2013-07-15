@@ -146,6 +146,9 @@
         font-size: 1em;
       }
     }
+  .nav > li {
+    font-size: 0.75em;
+  }
   }
   #header .navbar .brand {
     margin: 0;
@@ -159,7 +162,6 @@
     margin-bottom: 0px;
     float: none;
     width: 100%;
-    display:none;
   }
   .navbar-inner .btn.btn-navbar{
      margin: 0;
