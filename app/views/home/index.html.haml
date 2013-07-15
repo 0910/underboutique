@@ -1,4 +1,4 @@
-.row-fluid.fondo
+.row-fluid.fondo.mainslider
   .span9.full
     %ul#mainslider.bxslider
       -@designers.last(3).each do |designer|
@@ -25,13 +25,15 @@
     %h5 Nuevas Campañas
   .row-fluid
     .slider_campaigns
-      -(@products.last(4)*4).each do |product|
-        .span3
+      -(@designers.last(4)*4).each do |designer|
+        .span4
           .item
-            = render 'shared/product_link', product: product
+            - if image = designer.images.first
+              = link_to(designer_path(designer.id)) do
+                = image_tag image.file.url(:large)
 
 .row-fluid
-  .boxtitle.first
+  .boxtitle
     %h5 Novedades
   .row-fluid
     .slider_products

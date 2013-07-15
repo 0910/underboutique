@@ -1,7 +1,7 @@
 .content
   .designer
     .row-fluid
-      .span3.bio
+      .span3.bio.hidden-phone
         %h4 #{@designer.name}
         .scroll-pane(style="width:210px; height:360px; margin-top:15px;")
           %p #{@designer.bio}
@@ -9,7 +9,10 @@
         .item
           .ph
             - @designer.images.each do |image|
-              = image_tag(image.file.url(:large)) 
+              = image_tag(image.file.url(:large))
+    .row-fluid.visible-phone
+      %h4 #{@designer.name}
+      %p #{@designer.bio}
     .row-fluid.products-container
       .span3
         .filters
@@ -25,11 +28,12 @@
               %a(href="#accesorios") accesorios
       .span9
         .row-fluid.products
-          -@designer.products.last(8).each do |product|
-            .span4{:class => "#{product.category}"}
-              .item
-                = render 'shared/product_link', product: product
-                %h5 #{product.category}
+          .slider_products2
+            -(@designer.products.last(12)*6).each do |product|
+              .span4{:class => "#{product.category}"}
+                .item
+                  = render 'shared/product_link', product: product
+                  %h5 #{product.category}
                   
 %script{:type => "text/javascript"}
   $('.scroll-pane').jScrollPane();

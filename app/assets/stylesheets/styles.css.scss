@@ -90,10 +90,6 @@ body{
 .box{
   background:#fff;
 }
-h4.more{
-  color: #FFF;
-  position: absolute;
-}
 
 .btn-group{
   .btn,
@@ -158,10 +154,6 @@ h4.more{
   .item{
     position: relative;
     cursor: pointer;
-    h4.more{
-      left: 43%;
-      top: 50%;
-    }
   }
 }
 
@@ -295,7 +287,6 @@ HEADER
 #header{
   border-bottom: 1px solid #B3B3B3;
   margin-bottom: 25px;
-  margin-top: 70px;
   position: relative;
   
   .logo{
@@ -315,10 +306,10 @@ HEADER
     margin-bottom: 0;
     .brand {
       background: url(sprites.png);
-      background-position: -18px -71px;
+      background-position: -30px -71px;
       float: left;
-      width: 162px;
-      height: 25px;
+      width: 150px;
+      height: 20px;
       margin: 20px 0px 0 0;
       text-indent: -99999px;
       display: block;
@@ -412,6 +403,7 @@ NOVEDADES, PRODUCTOS
   width:100%;
   background:#fff;
   height:40px;
+  margin-top:50px;
   margin-bottom: 1px;
   h5{
     margin:12px 20px 8px 20px;
@@ -423,20 +415,15 @@ NOVEDADES, PRODUCTOS
 }
 .row-fluid {
   margin: 0;
-  .span3{
+  .span3, span4{
     margin-top: 1px;
     .item{
       position: relative;
       cursor: pointer;
       background: #FFF;
       margin-left: 1px;
-      h4.more{
-        left: 38%;
-        top: 40%;
-      }
-      /*height: 285px;*/
       .ph{
-        height:250px;
+        height:285px;
         overflow: hidden;
         a{
           margin: 0;

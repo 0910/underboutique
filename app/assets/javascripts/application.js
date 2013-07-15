@@ -27,3 +27,4 @@
 //= require magic
 //= require bootstrap-transition
 //= require bootstrap
+//= jquery.ba-throttle-debounce.min
