@@ -1,5 +1,5 @@
 class AdminUser < ActiveRecord::Base
-  attr_accessible :email, :password, :password_confirmation, as: :admin
+  attr_accessible :email, :password, :password_confirmation, :role, as: :admin
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -8,10 +8,11 @@ class AdminUser < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :role
   # attr_accessible :title, :body
   
   belongs_to :designer
+  belongs_to :comprador
   
   # Utility methods for checking the user roles
   def admin?
@@ -22,6 +23,10 @@ class AdminUser < ActiveRecord::Base
     role == 'designer'
   end
   
+  def comprador?
+    role == 'comprador'
+  end
+
   def guest?
     !admin? && !designer?
   end

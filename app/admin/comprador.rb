@@ -3,11 +3,14 @@ require "helpers"
 
 ActiveAdmin.register Comprador do
   menu :label => 'Comprador'
+  actions :all, :except => :new
+
+  menu :if => proc{ can?(:manage, 'comprador' ) }
   
   # The designer can only edit himself, so there's no point in having a list of designers
   # to choose from.
   before_filter proc{
-    redirect_to(action: :edit, id: current_admin_user.designer.id) if current_admin_user.designer?
+    redirect_to(action: :edit, id: current_admin_user.comprador.id) if current_admin_user.comprador?
   }, only: :index
   
   index do
@@ -21,7 +24,7 @@ ActiveAdmin.register Comprador do
       row :name
       row :telefono
       row :direccion
-      row :mail
+      # row :mail
       row :name_tarjeta
     end
   end
@@ -31,7 +34,7 @@ ActiveAdmin.register Comprador do
       f.input :name, as: :string, :label => "Nombre y Apellido"
       f.input :telefono
       f.input :direccion
-      f.input :mail
+      # f.input :mail
     end
     f.inputs :name => "Datos de la tarjeta" do
       f.input :name_tarjeta, as: :string, :label => "Nombre y apellido tal cual figura en la tarjeta"

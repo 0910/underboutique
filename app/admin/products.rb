@@ -15,6 +15,7 @@ ActiveAdmin.register Product do
   index do
     column :id
     column :name
+    column :designer
     column :price do |product|
       number_to_currency product.price, unit: "$"
     end

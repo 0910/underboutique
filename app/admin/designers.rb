@@ -2,7 +2,11 @@
 require "helpers"
 
 ActiveAdmin.register Designer do
-  menu :label => 'Designer'
+  menu :label => 'Designer' 
+  menu :if => proc{ can?(:manage, Designer ) }
+  actions :all, :except => :new
+
+  # menu :label => "Bio", :if => proc { current_admin_user.designer? }
   
   # The designer can only edit himself, so there's no point in having a list of designers
   # to choose from.

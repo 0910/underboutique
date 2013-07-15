@@ -5,8 +5,13 @@ class RegistrationsController < Devise::RegistrationsController
 
   def build_resource(hash=nil)
     super
-    resource.role = 'designer'
-    resource.build_designer(params[:designer])
+    if resource.role=='designer'
+	    resource.role = 'designer'
+	    resource.build_designer(params[:designer])
+    else
+	    resource.role = 'comprador'
+	    resource.build_comprador(params[:comprador])
+	end
   end
 end
 

@@ -4,12 +4,16 @@ class Ability
   def initialize(user)
     if user.admin?
       can :manage, :all
-    else
-      can :read, Designer, id: user.designer.id
-      can :manage, Designer, id: user.designer.id
-      can :manage, Product, designer_id: user.designer.id
-      can :manage, Order, designer_id: user.designer.id
-      can :manage, Designer, id: user.designer.id
+    else 
+      if user.designer?
+        can :read, Designer, id: user.designer.id
+        can :manage, Designer, id: user.designer.id
+        can :manage, Product, designer_id: user.designer.id
+        can :manage, Order, designer_id: user.designer.id
+        can :manage, Designer, id: user.designer.id
+      else
+        can :manage, Comprador, id: user.comprador.id
+      end
     end
     
     # Define abilities for the passed in user here. For example:
