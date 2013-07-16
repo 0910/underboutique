@@ -15,6 +15,7 @@ ActiveAdmin.register Order do
   index do
     column :code, sortable: false
     column :name
+    column :designer
     column :email
     column :created_at
     column :amount do |order|
