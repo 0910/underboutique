@@ -12,6 +12,18 @@
   .row-fluid .span9{
     width: 75%;
   }
+  .topdesigners{
+    .span6{
+      width:66.666667%;
+    }
+    .span3bis{
+      width:33.3333333%;
+    }
+  }
+  .span3bis{
+    margin-top:0px;
+    width:33.3333333%;
+  }
 }
 /* Mini desktop */
 @media (max-width: 979px){
@@ -209,6 +221,7 @@
   }
   .topdesigners{
     display:none;
+
   }
   #footer h5{
     font-size:7px;
