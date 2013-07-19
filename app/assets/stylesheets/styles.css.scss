@@ -196,6 +196,24 @@ HEADER
     background-image: transparent;
   }
 }
+#loginbox, #searchbox{
+  display:none;
+  margin-top:0px;
+  input{
+    border:none;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+}
+#searchbox{
+  height:60px;
+  input[type="text"]{
+    margin-top:15px;
+  }
+  .searchbutton{
+    background:url(search.png) no-repeat ;
+  }
+}
 .login-box,
 .search-box{
   display: none;
@@ -210,14 +228,8 @@ HEADER
   z-index: 1000;
   right: 0;
   position: absolute;
-  input[type="text"]{
-    margin: .8em 0 0 -1em;
-    width: 70%;
-    float: left;
-    padding: .2em .5em;
-    border: none;
-  }
   .btn{
+    width:60%;
     background: none;
     border: none;
     color: gray;
@@ -227,9 +239,11 @@ HEADER
     font-size: .7em;
     line-height:1.2em;
     margin: .7em 0 0 2em;
+    padding:0;
     display: block;
     float: left;
     box-shadow: none;
+    text-align: center;
   }
   .btn:hover{
     color:#fff;
@@ -244,10 +258,12 @@ HEADER
     text-align:left;
   }
   input{
-    width:98%;
+    width:96%;
   }
   input[type="submit"]{
-    width:22%;
+    width:40%;
+    margin:0;
+    padding: 0;
   }
 }
 .login-box{
@@ -269,7 +285,6 @@ HEADER
     top: 1em;
     .btn{
       margin: 1.5em 0;
-      padding: 1em;
       box-shadow: none;
     }
     .btn:first-child{
