@@ -8,6 +8,7 @@ UnderBoutique::Application.routes.draw do
     sessions: 'sessions'
   }, sign_out_via: [ActiveAdmin.application.logout_link_method]
   
+  resources :admin_users, only:[:destroy]
   resources :cart_items, only: [:index, :create, :destroy]
   
   resource :order, only: [:new, :create]
