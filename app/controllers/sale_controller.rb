@@ -1,6 +1,5 @@
 class SaleController < ApplicationController
   def index
-    @designers = Designer.all
-    @products = Product.all
+    @products = Product.find(:all, :conditions => {:sale => true}, :order => 'id DESC')
   end
 end

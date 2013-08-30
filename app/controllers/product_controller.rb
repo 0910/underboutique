@@ -6,8 +6,11 @@ class ProductController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @products = Product.all
-	  
   end
+
+  def edit
+  end
+
  
   def ropa
   	@products = Product.find(:all, :conditions => { :category => 'ropa'})

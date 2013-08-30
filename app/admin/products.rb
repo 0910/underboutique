@@ -36,8 +36,21 @@ ActiveAdmin.register Product do
   form_with_images do |f|
     f.input :name, :label => "Nombre",as: :string
     f.input :price, :label => "Precio", as: :number
+    f.input :sale
+    f.input :sale_price
     f.input :description, :label => "Descripcion"
     f.input :type_of_product, :label => "Tipo de producto",:as => :select, :collection => ["Ropa", "Zapatos","Accesorios"], :include_blank => false
+    # Buscamos las collecciones que pertencen a este diseñador
+    @collections = Collection.find(:all, :conditions => {:designer_id => f.object.designer_id})
+    @collection = ''
+    unless @collections.nil?
+      # @collections.each do |col|
+      #   @collection += col.title + '/'
+      # end
+      @collection.split('/')
+      f.input :collection, :as => :select, :collection => @collections.each do |col| @collection += col.title end
+    end
+    
     if f.object.designer.nil?
       f.input :designer 
     end

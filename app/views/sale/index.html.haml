@@ -2,12 +2,12 @@
   .span9
     #myCarousel.carousel
       .carousel-inner
-        -@designers.last(3).each do |designer|
+        -@products.each do |product|
           .slide
             .item
               .ph
-                - if image = designer.images.first
-                  = link_to(designer_path(designer.id)) do
+                - if image = product.images.first
+                  = link_to(product_path(product.id)) do
                     = image_tag image.file.url(:large)
                     .over
                     .info
@@ -15,10 +15,10 @@
                       .btn-group 
                         %p.btn en todas las compras que superen los $1000  
   .span3
-    -@designers.last(3).each do |designers| 
+    -@products.each do |product| 
       .item-content
-        %h5 #{designers.name} 
-        %p #{designers.bio.truncate(180)}
+        %h5 #{product.name} 
+        %p Sale price! #{product.sale_price}
 .row-fluid
   .span12
     .control-nav.control-carousel

@@ -6,11 +6,10 @@ class Ability
       can :manage, :all
     else 
       if user.designer?
-        can :read, Designer, id: user.designer.id
         can :manage, Designer, id: user.designer.id
         can :manage, Product, designer_id: user.designer.id
         can :manage, Order, designer_id: user.designer.id
-        can :manage, Designer, id: user.designer.id
+        can :manage, Collection, designer_id: user.designer.id
       else
         can :manage, Comprador, id: user.comprador.id
       end

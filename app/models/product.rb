@@ -1,10 +1,11 @@
 class Product < ActiveRecord::Base
   has_many :images
   belongs_to :designer
+  belongs_to :collection
   validates :name, presence: true
   validates :price, numericality: true
   validates :designer, presence: true
-  attr_accessible :name, :price, :description,:type_of_product, :images_attributes, :size_ids, as: [:default, :admin]
+  attr_accessible :name, :price, :description,:type_of_product, :images_attributes, :size_ids, :collection_id, :sale, :sale_price, as: [:default, :admin]
   attr_accessible :designer_id, as: :admin
   accepts_nested_attributes_for :images, allow_destroy: true
   has_many :product_sizes

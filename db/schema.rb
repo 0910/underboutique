@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130716150717) do
+ActiveRecord::Schema.define(:version => 20130829155650) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -49,6 +49,14 @@ ActiveRecord::Schema.define(:version => 20130716150717) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "collections", :force => true do |t|
+    t.string   "title",       :null => false
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "designer_id"
+  end
+
   create_table "compradors", :force => true do |t|
     t.string  "name"
     t.string  "telefono"
@@ -84,6 +92,7 @@ ActiveRecord::Schema.define(:version => 20130716150717) do
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
     t.integer  "designer_id"
+    t.integer  "collection_id"
   end
 
   create_table "order_products", :force => true do |t|
@@ -137,6 +146,9 @@ ActiveRecord::Schema.define(:version => 20130716150717) do
     t.integer  "designer_id"
     t.string   "category"
     t.string   "type_of_product"
+    t.integer  "collection_id"
+    t.boolean  "sale"
+    t.integer  "sale_price"
   end
 
   create_table "sizes", :force => true do |t|

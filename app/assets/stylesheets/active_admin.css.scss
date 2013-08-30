@@ -93,3 +93,15 @@ body.active_admin form fieldset > ol > li fieldset ol {
     }
   }
 }
+
+/*SIZES PRODUCTS*/
+body.active_admin form fieldset > ol > li fieldset ol{
+  padding: 2% 0 1% 0;
+}
+body.active_admin form fieldset > ol > li#product_sizes_input  fieldset ol li{
+  float: left;
+  margin-right: 2em;
+  input[type="checkbox"]{
+    margin-right: 1em;
+  }
+}
