@@ -19,6 +19,7 @@
 //= require moveSliderToVertical
 //= require filterable
 //= require jquery.ddslick
+//= require jquery.jscrollpane.min
 //= require menu
 //= require novedades
 //= require over
