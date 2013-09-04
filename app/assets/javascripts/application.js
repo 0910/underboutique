@@ -24,7 +24,7 @@
 //= require moveSliderToVertical
 //= require filterable
 //= require jquery.ddslick
-//= require jquery.jscrollpane.min
 //= require bootstrap-transition
 //= require bootstrap
 //= jquery.ba-throttle-debounce.min
+//= require jquery.jscrollpane.min
