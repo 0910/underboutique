@@ -1,0 +1,284 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ba",
+				"background"
+			],
+			[
+				"bl",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"bak",
+				"background"
+			],
+			[
+				"backgr",
+				"background-position"
+			],
+			[
+				"p",
+				"position"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"te",
+				"text-transform"
+			],
+			[
+				"fon",
+				"font-size"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 307.0,
+		"selected_items":
+		[
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"ham",
+				"Set Syntax: Ruby Haml"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Psiconauta/sites/underboutique/app/views/home/index.html.haml",
+		"/Users/Psiconauta/sites/underboutique/app/assets/stylesheets/styles.css.scss",
+		"/Users/Psiconauta/sites/underboutique/app/assets/stylesheets/designer.css.scss",
+		"/Users/Psiconauta/sites/underboutique/app/assets/stylesheets/carousel.css.scss",
+		"/Users/Psiconauta/sites/underboutique/app/assets/stylesheets/product.css.scss",
+		"/Users/Psiconauta/sites/underboutique/config/deploy.rb",
+		"/Users/Psiconauta/sites/underboutique/config/database.yml",
+		"/Users/Psiconauta/Downloads/buildinternet-supersized-2ccedfd/slideshow/theme/supersized.shutter.js",
+		"/Users/Psiconauta/sites/rad/app/assets/javascripts/thumbnailsWidth.js",
+		"/Users/Psiconauta/sites/rad/app/views/pages/work.html.haml",
+		"/Users/Psiconauta/Downloads/buildinternet-supersized-2ccedfd/slideshow/theme/supersized.shutter.css",
+		"/Users/Psiconauta/sites/rad/app/assets/stylesheets/works.css.scss",
+		"/Users/Psiconauta/sites/rad/app/views/works/show.html.haml",
+		"/Users/Psiconauta/sites/rad/app/assets/javascripts/jquery.nicescroll.min.js",
+		"/Users/Psiconauta/sites/rad/app/assets/javascripts/application.js",
+		"/Users/Psiconauta/Downloads/buildinternet-supersized-2ccedfd/slideshow/demo.html",
+		"/Users/Psiconauta/sites/rad/app/views/layouts/application.html.haml",
+		"/Users/Psiconauta/sites/rad/app/views/works/index.html.haml",
+		"/Users/Psiconauta/sites/rad/app/assets/javascripts/queryLoader.js",
+		"/Users/Psiconauta/sites/rad/app/assets/javascripts/show.js",
+		"/Users/Psiconauta/sites/rad/app/assets/javascripts/nav.js",
+		"/Users/Psiconauta/sites/rad/app/assets/javascripts/jquery.quicksand.js",
+		"/Users/Psiconauta/sites/rad/app/views/works/_gallery.html.haml",
+		"/Users/Psiconauta/sites/rad/app/assets/stylesheets/styles.css.scss",
+		"/Users/Psiconauta/sites/rad/app/controllers/works_controller.rb",
+		"/Users/Psiconauta/sites/rad/app/assets/javascripts/over.js",
+		"/Users/Psiconauta/sites/rad/app/assets/javascripts/do-scroll.js",
+		"/Users/Psiconauta/Downloads/jquery.nicescroll.340/test/browser.html",
+		"/Users/Psiconauta/sites/rad/app/models/work.rb",
+		"/Users/Psiconauta/sites/rad/app/views/works/covers.html.haml",
+		"/Users/Psiconauta/sites/rad/app/assets/javascripts/magic.js",
+		"/Users/Psiconauta/sites/rad/app/assets/stylesheets/queries.css.scss",
+		"/Users/Psiconauta/sites/rad/app/assets/stylesheets/queryLoader.css",
+		"/Users/Psiconauta/sites/prueba/Gemfile",
+		"/Users/Psiconauta/sites/prueba/app/assets/stylesheets/styles.css.scss.css",
+		"/Users/Psiconauta/sites/arq/app/assets/stylesheets/application.css",
+		"/Users/Psiconauta/sites/prueba/app/views/products/_form.html.haml",
+		"/Users/Psiconauta/sites/prueba/app/views/products/index.html.haml",
+		"/Users/Psiconauta/sites/prueba/app/pages/index.html.haml",
+		"/Users/Psiconauta/sites/prueba/app/views/layouts/application.html.haml",
+		"/Users/Psiconauta/sites/prueba/app/assets/stylesheets/styles.css",
+		"/Users/Psiconauta/sites/prueba/app/views/welcome/index.html.haml",
+		"/Users/Psiconauta/sites/prueba/app/assets/stylesheets/application.css",
+		"/Users/Psiconauta/sites/prueba/app/assets/stylesheets/application.css.scss.css",
+		"/Users/Psiconauta/sites/rad/app/assets/stylesheets/application.css.scss",
+		"/Users/Psiconauta/sites/prueba/config/routes.rb",
+		"/Users/Psiconauta/sites/prueba/app/views/products/index.html.erb",
+		"/Users/Psiconauta/sites/prueba/app/models/product.rb",
+		"/Users/Psiconauta/sites/prueba/app/controllers/products_controller.rb"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"topdesigner",
+			".item-content",
+			"return base.options.slides[vars.current_slide][field];",
+			"$('.current-thumb').removeClass('current-thumb');",
+			"$('.current-thumb').removeClass('current-thumb');\n				$('li', vars.thumb_list).eq(vars.current_slide).addClass('current-thumb');",
+			"next_slide",
+			"load",
+			"progress",
+			"append",
+			"z-index",
+			"data",
+			"loader",
+			"<td>",
+			"<th>",
+			"<%="
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"applihaml",
+				"app/views/layouts/application.html.haml"
+			],
+			[
+				"proind",
+				"app/views/products/index.html.erb"
+			],
+			[
+				"prodcon",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"pro",
+				"app/models/product.rb"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"apliham",
+				"app/views/layouts/application.html.haml"
+			],
+			[
+				"gem",
+				"Gemfile"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true
+}

@@ -156,7 +156,9 @@ body{
     cursor: pointer;
   }
 }
-
+.topdesigners{
+  margin-top:50px;
+}
 /*-----------------------------------------------------------------------------*/
 /*
 HEADER
@@ -421,8 +423,10 @@ NOVEDADES, PRODUCTOS
   margin-top:50px;
   margin-bottom: 1px;
   h5{
-    margin:12px 20px 8px 20px;
+    margin:12px 0px 8px 0px;
     float:left;
+    width:100%;
+    text-align:center;
   }
 }
 .first{
@@ -437,13 +441,20 @@ NOVEDADES, PRODUCTOS
       cursor: pointer;
       background: #FFF;
       margin-left: 1px;
+      .info{}
       .ph{
         height:285px;
         overflow: hidden;
         a{
           margin: 0;
           img{
-          width: 100%;
+            width: 100%;
+          }
+          h4.more {
+            width: 100%;
+            text-align: center;
+            margin: 50% 0 0 0;
+            color: #FFF;
           }
         }
       }

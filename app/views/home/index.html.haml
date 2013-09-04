@@ -12,7 +12,7 @@
                   %h1 #{designer.name} 
                   .btn-group.swift
                     %button.btn  
-                      %p Ver Colección
+                      %p Ver Designer
   .span3.full#bx-pager
     -@designers.last(3).each_with_index do |designer, index| 
       %a.item-content{ :href => "#",:data => {'slide-index' => index} }
@@ -22,7 +22,7 @@
 
 .row-fluid
   .boxtitle.first
-    %h5 Nuevas Campañas
+    %h5 Nuevas Colecciones
   .row-fluid
     .slider_campaigns
       -(@designers.last(4)*4).each do |designer|
@@ -43,29 +43,30 @@
             = render 'shared/product_link', product: product
             %h5 #{product.category}
 
-.row-fluid.topdesigners
-  .boxtitle.first
-    %h5 Top 10 Diseñadores
-  .span3
-    %ul#topdesigners.nav.nav-tabs
-      -@designers.last(5).each_with_index do |designer,index|
-        %li
-          %a{ :href => "#top#{index}",:data => {'toogle' => "tab"} } #{designer.name}
-  .tab-content
-    -@designers.last(5).each_with_index do |designer, index|
-      .tab-pane{:id => "top#{index}"}
-        .span6
-          -if image = designer.images.first
-            .slide
-              .item
-                = image_tag(image.file.url(:large))
-        .span3bis
-          .boxtitle
-            %h5 Colección
-          -@designers.last(5).each_with_index do |designer, index|
-            .slider_top5(style="height:250px;")
-              - (designer.products.last(5)*4).each do |product|
+.row-fluid
+  .topdesigners
+    .boxtitle.first
+      %h5 Top 10 Diseñadores
+    .span3
+      %ul#topdesigners.nav.nav-tabs
+        -@designers.last(5).each_with_index do |designer,index|
+          %li
+            %a{ :href => "#top#{index}",:data => {'toogle' => "tab"} } #{designer.name}
+    .tab-content
+      -@designers.last(5).each_with_index do |designer, index|
+        .tab-pane{:id => "top#{index}"}
+          .span6
+            -if image = designer.images.first
+              .slide
                 .item
-                  .ph
-                    -if image = product.images.first
-                      = link_to(image_tag(image.file.url(:large)), product_path(product.id))
+                  = image_tag(image.file.url(:large))
+          .span3bis
+            .boxtitle
+              %h5 Colección
+            -@designers.last(5).each_with_index do |designer, index|
+              .slider_top5(style="height:250px;")
+                - (designer.products.last(5)*4).each do |product|
+                  .item
+                    .ph
+                      -if image = product.images.first
+                        = link_to(image_tag(image.file.url(:large)), product_path(product.id))
