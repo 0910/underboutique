@@ -1,7 +1,6 @@
 $(function(){
   makeSlides();
 });
-// $(window).on( 'resize', $.debounce(100, fn));
 $(window).resize(function() {
   makeSlides();
 });
