@@ -25,12 +25,11 @@
     %h5 Nuevas Colecciones
   .row-fluid
     .slider_campaigns
-      -(@designers.last(4)*4).each do |designer|
+      -(@collections.last(4)*4).each do |collection|
         .span4
           .item
-            - if image = designer.images.first
-              = link_to(designer_path(designer.id)) do
-                = image_tag image.file.url(:large)
+            - if image = collection.images.first
+              = image_tag image.file.url(:large)
 
 .row-fluid
   .boxtitle
