@@ -150,6 +150,33 @@ body{
 
 /*PRODUCTS GRID*/
 
+.collections .span4{
+  .item{
+    background: #FFF;
+    margin-left:1px;
+    overflow: hidden;
+    height:198px;
+    .ph{
+      height:198px;
+    }
+    p{
+      margin:0px;
+    }
+    h4{
+      width:100%;
+      text-align: center;
+      margin:28% 0;
+      padding:0;
+      color:#fff;
+    }
+    a{
+      margin:0px;
+    }
+    img{
+      width: 100%;
+    }
+  }
+}
 .span4{
   .item{
     position: relative;
@@ -533,6 +560,9 @@ CART
   .cart-items{
     margin-top:10px;
   }
+  .nav{
+    margin-right:10px;
+  }
   .cart-item{
     margin-top:10px;
     background:#fff;
@@ -565,7 +595,19 @@ CART
     width:40%;
   }
   .delete{
-    text-align:right;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    color: #ff0000;
+    margin-top: 6px;
+    float: right;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 15px 8px 15px;
+    border-radius: 5px;
+  }
+  .delete:hover{
+    background:#f5f5f5;
   }
 }
 /*--------------------------------

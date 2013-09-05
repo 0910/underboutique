@@ -1,13 +1,11 @@
 .row-fluid.detail
   .span6
-    #myCarousel
-      .carousel-inner
+    .product_photos
+      .viewer
         .item
           .ph
             - @product.images.each do |image|
               = image_tag(image.file.url(:large))
-            .over
-              .more
       .thumbs
         - @product.images.each do |image|
           .item
@@ -32,7 +30,7 @@
         -# %button.btn-large(type='button')agregar wishlist
 .row-fluid
   .boxtitle.first
-    %h5 Novedades
+    %h5 Productos Relacionados
   .row-fluid
     -@products.reverse.each do |product|
       .span3

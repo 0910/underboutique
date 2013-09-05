@@ -1,10 +1,6 @@
 .product{
-  #myCarousel{
-    height: 600px;
-    width: 90%;
-    .carousel-inner{
-      height: 80%;
-    }
+  .product_photos{
+    width:90%;
     .thumbs{
       margin-top: 20px;
       background: none repeat scroll 0 0 white;
@@ -13,20 +9,17 @@
       .item{
         width: 25%;
         float: left;
-      }
-      .ph {
-        img{
-        height: 100%;
-        max-width: none;
+        .ph {
+          img{
+            width: 100%;
+          }
         }
-      }
-      .over{
-        cursor: pointer;
+        .over{
+          cursor: pointer;
+        }
       }
     }
   }
-
-
 
   .detail{
     margin-top: 2em;
@@ -34,8 +27,6 @@
       width: 50%;
       }
     .prod{
-      margin-top: 2em;
-      padding-right: 6em;
       h5{
         position: relative;
         top: -.5em;
@@ -63,10 +54,14 @@
         input[type="number"]{
           border: 1px solid #CCC;
           padding: .5em;
+          width:10%;
+        }
+        select{
+          width:30%;
         }
       }
       .btn-large{
-        width: 49%;
+        width: 100%;
         font-size: 12px
       }
     }

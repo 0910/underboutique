@@ -23,13 +23,17 @@
 .row-fluid
   .boxtitle.first
     %h5 Nuevas Colecciones
-  .row-fluid
+  .row-fluid.collections
     .slider_campaigns
-      -(@collections.last(4)*4).each do |collection|
+      -(@collections.last(9)*3).each do |collection|
         .span4
           .item
-            - if image = collection.images.first
-              = image_tag image.file.url(:large)
+            .ph
+              - if image = collection.images.first
+                %a(href="#")
+                  = image_tag(image.file.url(:large))
+                  .over
+                    %h4 #{collection.title}
 
 .row-fluid
   .boxtitle

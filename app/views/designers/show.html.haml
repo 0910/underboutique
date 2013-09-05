@@ -13,7 +13,23 @@
     .row-fluid.visible-phone
       %h4 #{@designer.name}
       %p #{@designer.bio}
+    .row-fluid.collections
+      .boxtitle.first
+        %h5 Colecciones
+      .span4
+        - @collections.each do |collection|
+          .item
+            .ph
+              - if image = collection.images.first
+                %a(href="#")
+                  = image_tag(image.file.url(:large))
+                  .over
+                    %h4 #{collection.title}
+            .info
+              .background
     .row-fluid.products-container
+      .boxtitle.first
+        %h5 Productos
       .span3
         .filters
           %h4 filtrar por producto
@@ -34,12 +50,6 @@
                 .item
                   = render 'shared/product_link', product: product
                   %h5 #{product.category}
-      .span12
-        - @collections.each do |collection|
-          = collection.title
-          = collection.description
-          - if image = collection.images.first 
-            = image_tag(image.file.url(:large))
                   
 %script{:type => "text/javascript"}
   $('.scroll-pane').jScrollPane();
