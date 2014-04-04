@@ -1,12 +1,9 @@
-.ph
-  - if image = product.images.first
-    = link_to(product_path(product.id)) do
-      = image_tag image.file.url(:large)
-      .over
-        %h4.more ver mas
-.info
-  .background 
-  %p 
-    = product.name
-  .precio 
-    %p #{product.price}$ 
+- if image = product.images.first
+	= link_to(product_path(product.id)) do
+		.ph{:style => "background-image: url(#{image.file.url(:large)})"} 
+			.over
+				.info
+					%h1 #{product.name}
+					%p $ #{product.price}
+					.hr
+					%h4.more ver mas

@@ -1,56 +1,28 @@
-.content
-  .designer
-    .row-fluid
-      .span3.bio.hidden-phone
-        %h4 #{@designer.name}
-        .scroll-pane(style="width:210px; height:360px; margin-top:15px;")
-          %p #{@designer.bio}
-      .span9.large-img
-        .item
-          .ph
-            - @designer.images.each do |image|
-              = image_tag(image.file.url(:large))
-    .row-fluid.visible-phone
-      %h4 #{@designer.name}
-      %p #{@designer.bio}
-    .row-fluid.collections
-      .boxtitle.first
-        %h5 Colecciones
-      .span4
-        - @collections.each do |collection|
-          .item
-            .ph
-              - if image = collection.images.first
-                %a(href="#")
-                  = image_tag(image.file.url(:large))
-                  .over
-                    %h4 #{collection.title}
-            .info
-              .background
-    .row-fluid.products-container
-      .boxtitle.first
-        %h5 Productos
-      .span3
-        .filters
-          %h4 filtrar por producto
-          %ul#filters
-            %li
-              %a.active(href="#all") todos
-            %li
-              %a(href="#ropa") ropa
-            %li
-              %a(href="#zapatos") zapatos
-            %li
-              %a(href="#accesorios") accesorios
-      .span9
-        .row-fluid.products
-          .slider_products2
-            -(@designer.products.last(12)*6).each do |product|
-              .span4{:class => "#{product.category}"}
-                .item
-                  = render 'shared/product_link', product: product
-                  %h5 #{product.category}
-                  
-%script{:type => "text/javascript"}
-  $('.scroll-pane').jScrollPane();
-  $('#list').filterable();
+.row-fluid
+  .page#featured
+    .slider--fullscreen
+      .slider
+        .slider-strip
+          - @designer.images.each do |image|
+            .slider-item{:style => "background-image: url(#{image.file.url(:large)})"} 
+              .container
+                .slider-info
+                  %h1.checkcolor #{@designer.name}
+        .slider-arrow.slider-arrow--left &#8249
+        .slider-arrow.slider-arrow--right &#8250
+        .slider-dots
+.row-fluid
+  .box.page#bio
+    %h5 About
+    .hr
+    %p #{@designer.bio}    
+.row-fluid
+  .box.page#products
+    %h5 Productos
+    .hr
+    %p Spring/Summer 2014    
+.row-fluid.collections
+  -(@designer.products.last(12)*6).each do |product|
+    .span3{:class => "#{product.category}"}
+      .item
+        = render 'shared/product_link', product: product

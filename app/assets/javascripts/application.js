@@ -16,8 +16,9 @@
 //= require_tree .
 //= require menu
 //= require novedades
-//= require over
 //= require product
+//= require background-check.min
+//= slider
 //= require magic
 //= require jquery.easing.1.3
 //= require moveSliderToHorizontal

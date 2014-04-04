@@ -1,5 +1,12 @@
 $(function(){
   makeSlides();
+  $('.item').hover(
+    function(){
+      $(this).find('.over').stop().fadeIn(400);
+    },
+    function(){
+      $(this).find('.over').fadeOut(400);
+    });
 });
 $(window).resize(function() {
   makeSlides();
@@ -8,60 +15,29 @@ $(window).bind('orientationchange', function(event){
   makeSlides();
 });
 function makeSlides(){
-  windowWidth = $('.container').width();
-  if (windowWidth <= 480){
-    slideWidth = windowWidth;
-    slideCnt = 4;
-    slideWidth2 = windowWidth / 3;
-    slideCnt2 = 3;
-    slideMode = 'horizontal';
+  photoTot = $('.slide a').size();
+  photoTot--;
+  photoCnt = 0;
+  if (photoTot > 1){ $('.slide .prev, .slide .nextphoto').fadeIn(); }
+  $('.photo').each(function(){
+      $('.steps').append('<div class="step"></div>');
+    });
+    // select the first
+    $('.photo').eq(0).show();
+  $('.steps .step').eq(0).css('opacity', 1);
+}
+$(window).scroll(function(){
+    nav();
+});
+$('#scrolldown').click(function(event){
+  $.scrollTo($('#scrolldown'), 800);
+});
+function nav(){
+  var wherescroll = $(window).scrollTop();
+  if (wherescroll <= 50){
+    $('#header').css('background-color', 'rgba(0, 0, 0, 0);');
   }
-  else if (windowWidth > 480 && windowWidth <= 767){
-    slideWidth = windowWidth / 4;
-    slideCnt = 4;
-    slideWidth2 = windowWidth / 3;
-    slideCnt2 = 3;
-    slideMode = 'horizontal';
+  else {
+    $('#header').css('background-color', 'rgba(0, 0, 0, 0.7);');
   }
-  else if (windowWidth > 767){
-    slideWidth = windowWidth / 4;
-    slideCnt = 4;
-    slideWidth2 = windowWidth / 3;
-    slideCnt2 = 3;
-    slideMode = 'vertical';
-  }
-  $('.bxslider').bxSlider({
-    pagerCustom: '#bx-pager',
-    mode: slideMode,
-    auto: true
-  });
-  $('.slider_campaigns').bxSlider({
-    slideWidth: slideWidth2,
-    minSlides: slideCnt2,
-    maxSlides: slideCnt2,
-    slideMargin: 0
-  });
-  $('.slider_products').bxSlider({
-    slideWidth: slideWidth,
-    minSlides: slideCnt,
-    maxSlides: slideCnt,
-    slideMargin: 0
-  });
-  $('.slider_products2').bxSlider({
-    slideWidth: slideWidth,
-    minSlides: slideCnt2,
-    maxSlides: slideCnt2,
-    slideMargin: 0
-  });
-  $('.slider_top5').bxSlider({
-    slideWidth: 256,
-    minSlides: 1,
-    maxSlides: 1,
-    slideMargin: 0
-  });
-  $('.bx-wrapper .bx-viewport').css('height', 'auto');
-  $('#topdesigners a').click(function(e) {
-    e.preventDefault();
-    $(this).tab('show');
-  });
 }

@@ -13,12 +13,12 @@
  *= require bootstrap-responsive
  *= require formtastic-plus-bootstrap
  *= require formtastic-plus-bootstrap/responsive
- *= require bxslider
+ *= require font-awesome
  *= require styles
  *= require designer
  *= require news
  *= require product
- *= require carousel
+ *= require slider
  *= require sale
  *= require jquery.jscrollpane
  *= require queries

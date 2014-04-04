@@ -1,52 +1,46 @@
 #header
-  .row-fluid
-    .btn-group
-      - if current_admin_user
-        .btn
-          = link_to('logout', destroy_admin_user_session_path, method: 'delete')
-      - else
-        .btn.login  
-          %a Iniciar sesión
-      .btn
-        = link_to('Registrarse', new_admin_user_registration_path)
-      .btn.search 
-        %a Buscar
-      .btn 
-        = link_to 'cart', cart_items_path
-    .search-box#searchbox
-      %form
-        %input(type='text')
-        %input(class='searchbutton' type='submit' value='buscar')
-    .span4.login-box#loginbox
-      = form_for(AdminUser.new, as: :admin_user, url: session_path(:admin_user)) do |f|
-        = f.label :email
-        = f.email_field :email
-        = f.label :password
-        = f.password_field :password
-        = f.hidden_field :remember_me, value: 1
-        .btns
-          = f.submit 'iniciar sesión', class: 'btn'
-          = link_to 'olvidó su contraseña', new_password_path(:admin_user), class: 'btn'  
-  .row-fluid  
-    .navbar
-      .navbar-inner
-        %button.btn.btn-navbar.collapsed(type="button" data-toggle="collapse" data-target=".nav-collapse")+
-        = link_to "UNDERBOUTIQUE", {:controller => "home", :action => "index"}, :class => "brand" 
-        .nav-collapse.collapse
-          %ul.nav
-            %li#sale
-              = link_to('sale', {:controller => "sale", :action => "index"})
-            %li#news
-              = link_to('novedades', {:controller => "news", :action => "index"})
-            %li#designers
-              = link_to('diseñadores',{:controller => "designers", :action => "index"} )
-            %li#ropa
-              = link_to('ropa', {:controller => "product", :action => "index"})
-            %li#shoes
-              = link_to('zapatos', {:controller => "product", :action => "index"})
-            %li#accesories
-              = link_to('accesorios', {:controller => "product", :action => "index"})
-            %li#gifts
-              = link_to('gifts', {:controller => "product", :action => "index"})
-            %li#journal
-              = link_to('the journal', {:controller => "product", :action => "index"})
+  .container  
+    .row-fluid  
+      .navbar
+        .navbar-inner
+          = link_to "UNDERBOUTIQUE", {:controller => "home", :action => "index"}, :class => "brand" 
+          %button.btn.btn-navbar.collapsed(type="button" data-toggle="collapse" data-target=".nav-collapse")+
+          .nav-collapse.collapse
+            %ul.nav
+              %li.checkcolor#news
+                = link_to('novedades', {:controller => "news", :action => "index"})
+              %li.checkcolor#designers
+                = link_to('diseñadores',{:controller => "designers", :action => "index"} )
+              %li.checkcolor#ropa
+                = link_to('ropa', {:controller => "product", :action => "index"})
+              %li.checkcolor#shoes
+                = link_to('zapatos', {:controller => "product", :action => "index"})
+              %li.checkcolor#accesories
+                = link_to('accesorios', {:controller => "product", :action => "index"})
+              %li.checkcolor#sale
+                = link_to('sale', {:controller => "sale", :action => "index"})
+          %ul.nav.pull-right
+            - if current_admin_user
+              %li.checkcolor
+                = link_to('Log Out', destroy_admin_user_session_path, method: 'delete')
+            - else
+              %li.checkcolor
+                = link_to('Log In', 'admin_users/sign_in')
+            %li.checkcolor
+              %a Buscar
+            %li
+              = link_to 'cart', cart_items_path
+          .search-box#searchbox
+            %form
+              %input(type='text')
+              %input(class='searchbutton' type='submit' value='buscar')
+          .span4.login-box#loginbox
+            = form_for(AdminUser.new, as: :admin_user, url: session_path(:admin_user)) do |f|
+              = f.label :email
+              = f.email_field :email
+              = f.label :password
+              = f.password_field :password
+              = f.hidden_field :remember_me, value: 1
+              .btns
+                = f.submit 'iniciar sesión', class: 'btn'
+                = link_to 'olvidó su contraseña', new_password_path(:admin_user), class: 'btn'
