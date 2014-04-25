@@ -18,9 +18,18 @@
     %p #{@designer.bio}    
 .row-fluid
   .box.page#products
-    %h5 Productos
-    .hr
-    %p Spring/Summer 2014    
+    .row-fluid
+      %h5 Productos
+    .row-fluid
+      .hr
+    .row-fluid
+      %ul#filter
+        %li.filter{ :data => { :filter => "cat1" }}
+          %a.btn.info{ :href => "#" } Ropa 
+        %li.filter{ :data => { :filter => "cat1" }}
+          %a.btn.info{ :href => "#" } Zapatos 
+        %li.filter{ :data => { :filter => "cat1" }}
+          %a.btn.info{ :href => "#" } Accesorios 
 .row-fluid.collections
   -(@designer.products.last(12)*6).each do |product|
     .span3{:class => "#{product.category}"}

@@ -121,53 +121,5 @@
 .slider--fullscreen .slider-item {
   background-size: cover;
   background-position: center;
-}
-.slider-info {
-  position: absolute;
-  width:50%;
-  height: 155px;
-  left: 0;
-  right: 0;
-  top: 50%;
-  padding: 25px;
-  margin: -110px auto 0;
-  background: transparent;
-  text-align: center;
-  h1{
-    font: 96px 'GothamMedium',helvetica,arial,sans-serif;
-    color: #FFFFFF;
-    margin: 0 15px;
-  }
-  h1.background--light{
-    color:#000;
-  }
-  h6{
-    font: 28px 'GothamMedium',helvetica,arial,sans-serif;
-    letter-spacing: 6pt;
-    color: #FFFFFF;
-    margin: 18px 0 15px;
-    width: 100%;
-    text-align: center;
-  }
-  h6.background--light{
-    color:#000;
-  }
-}
-.carousel-caption.designer {
-  background: transparent;
-}
-.btn-primary.background--light {
-    background-color: rgba(0, 0, 0, 0);
-    background-image: none;
-    border: 2px solid #000;
-    border-radius: 0;
-    color: #000;
-    font-family: 'GothamMedium';
-    padding: 15px 25px;
-    text-shadow: none;
-    text-transform: uppercase;
-}
-.btn-primary:hover{
-  background-color: #000;
-  color: #fff;
+  background-attachment: fixed;
 }

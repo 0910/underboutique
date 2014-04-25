@@ -37,7 +37,7 @@
     }
 
     BackgroundCheck.init({
-      targets: '.slider-arrow, .slider-dots, .checkcolor',
+      targets: '.slider-arrow, .slider-dots',
       images: images
     });
   }

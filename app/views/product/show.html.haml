@@ -1,40 +1,64 @@
 .row-fluid.detail
-  .span6
-    .product_photos
-      .viewer
-        .item
-          .ph
-            - @product.images.each do |image|
-              = image_tag(image.file.url(:large))
+  .container
+    .span2
       .thumbs
-        - @product.images.each do |image|
-          .item
-            .ph
+        %a.fa.fa-angle-up
+        #thumbscarousel
+          - @product.images.each do |image|
+            .item
               = image_tag(image.file.url(:small))
-              .over
-  .span6.prod
-    %h2 #{@product.name}
-    %h5.description #{@product.description.truncate(50)}
-    %p.price #{@product.price}$
-    %p #{@product.description}
-    = form_tag(cart_items_path, class: "add-to-cart") do
-      = hidden_field_tag 'product_id', @product.id
-      .formitem.selects
-        %label Cantidad
-        %input(type="number" name="quantity" value="1" min="1" max="1000")
-      .formitem.selects
-        %label Talle
-        = select_tag "size", options_from_collection_for_select(@product.sizes, :id, :label)
-      .btn-group
-        = submit_tag 'agregar a carrito', class: 'btn-large'
-        -# %button.btn-large(type='button')agregar wishlist
+        %a.fa.fa-angle-down
+    .span6
+      .product_photos
+        .viewer
+          - @product.images.each do |image|
+            .item
+              = link_to image_tag(image.file.url(:large)), image.file.url(:original), class: 'cloud-zoom', rel:'adjustX: 0, adjustY:0'
+    .span4.prod
+      .row-fluid
+        %h2 #{@product.name}
+      .row-fluid
+        %p.price $#{@product.price}
+      .row-fluid
+        %p #{@product.description}
+      .row-fluid
+        = form_tag(cart_items_path, class: "add-to-cart") do
+          = hidden_field_tag 'product_id', @product.id
+          .formitem.selects
+            .row-fluid
+              .span6
+                .row-fluid
+                  %label Cantidad
+                .row-fluid
+                  %input(type="number" name="quantity" value="1" min="1" max="1000")
+              .span6
+                .row-fluid
+                  %label Talle
+                .row-fluid
+                  = select_tag "size", options_from_collection_for_select(@product.sizes, :id, :label)
+          = submit_tag 'agregar a carrito', class: 'btn btn-blackline'
+          -# %button.btn-large(type='button')agregar wishlist
 .row-fluid
   .boxtitle.first
     %h5 Productos Relacionados
-  .row-fluid
-    -@products.reverse.each do |product|
-      .span3
-        .item
-          = render 'shared/product_link', product: product
+.row-fluid.collections
+  -@products.last(20).each do |product|
+    .span3{:class => "#{product.category}"}
+      .item
+        = render 'shared/product_link', product: product
 :javascript
-$('#size').ddslick();
+  $(document).ready(function(){
+    $('#size').ddslick();
+    $('#thumbscarousel').carouFredSel({
+        items               : 3,
+        direction           : "up",
+        scroll : {
+            items           : 1,
+            infinite        : true,
+            easing          : "swing",
+            duration        : 1000,                         
+            pauseOnHover    : true,
+            play            : false
+        }                   
+    });
+  });

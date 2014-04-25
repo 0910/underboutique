@@ -5,12 +5,8 @@
         %h1 UNDERBOUTIQUE
         %h2 Portal de diseñadores
       .row-fluid
-        .btn-group.swift.selectuser
-          %button.btn  
-            %p Soy Designer
-        .btn-group.swift.selectuser
-          %button.btn  
-            %p Soy Comprador
+        %a.btn.btn-white{:href => "#"}
+          QUIERO REGISTRARME
 .row-fluid
   .boxtitle
     %h5 Featured Designers
@@ -19,16 +15,16 @@
     .slider--fullscreen
       .slider
         .slider-strip
-          -(@designers.last(3)*4).each do |designer|
+          -@designers.last(3).each do |designer|
             - if image = designer.images.first
               .slider-item{:style => "background-image: url(#{image.file.url(:large)})"}
                 .container
                   .slider-info
-                    %h6.checkcolor featured designer
-                    %h1.checkcolor #{designer.name}
+                    %h6 featured designer
+                    %h1 #{designer.name}
                     //%p.lead Some Information Her
                     = link_to(designer_path(designer.id)) do
-                      .btn.btn-primary.btn-small.checkcolor Ver Perfil
+                      .btn.btn-white Ver Perfil
         .slider-arrow.slider-arrow--left &#8249
         .slider-arrow.slider-arrow--right &#8250
         .slider-dots
@@ -37,7 +33,7 @@
     %h5 Diseñadores destacados
 .row-fluid
   .page#designerslist
-    -(@designers.last(3)*4).each do |designer|
+    -@designers.last(3).each do |designer|
       .row
         .span6.photo
           - if image = designer.images.first
@@ -49,13 +45,16 @@
             .hr
             - unless designer.bio.nil? 
               %p #{designer.bio.truncate(240)}
-            .btn.btn-primary.btn-small Ver Perfil
+            .btn.btn-blackline Ver Perfil
 .row-fluid
   .boxtitle
     %h5 Productos destacados
 .row-fluid.collections
-  -(@products.last(15)*12).each do |product|
+  -@products.last(20).each do |product|
     .span3{:class => "#{product.category}"}
       .item
         = render 'shared/product_link', product: product
-
+:javascript
+  $(function(){
+    $('#home').parallax("50%", 0.1);
+  });

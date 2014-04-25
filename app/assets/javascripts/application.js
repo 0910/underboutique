@@ -12,17 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bxslider
 //= require_tree .
 //= require menu
-//= require novedades
-//= require product
 //= require background-check.min
+//= require jquery.carouFredSel-6.2.1
 //= slider
+//= require jquery.mixitup
+//= require cloud-zoom.1.0.2.min
 //= require magic
 //= require jquery.easing.1.3
-//= require moveSliderToHorizontal
-//= require moveSliderToVertical
+//= require jquery.parallax.1.1.3
 //= require filterable
 //= require jquery.ddslick
 //= require bootstrap-transition

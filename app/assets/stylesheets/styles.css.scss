@@ -30,6 +30,17 @@
       asset-url('gothammedium.ttf', font) format('truetype'),
       asset-url('gothammedium.svg#GothamRegular', font) format('svg')
 }
+@font-face {
+  font: {
+    family: 'GothamLight';
+    weight: 'normal';
+    style: 'normal';
+  }
+  src:asset-url('GothamHTF-XLight.eot', font);
+  src:asset-url('GothamHTF-XLight.eot', font) format('embedded-opentype'),
+      asset-url('GothamHTF-XLight.ttf', font) format('truetype'),
+      asset-url('GothamHTF-XLight.svg#GothamRegular', font) format('svg')
+}
 
 h1, h2, h3, h4, h5, h6, a, textarea{
   margin: 5px 0;
@@ -39,8 +50,8 @@ h1, h2, h3, h4, h5, h6, a, textarea{
   font-weight:normal;
 }
 h2{ 
-  font-size: 2em;   
-  font-family: 'GothamMedium';
+  font-size: 24px;   
+  font-family: 'GothamBold';
 }
 h4{ 
   font-size: .95em; 
@@ -71,11 +82,11 @@ ul,ol{
 /* GENERAL */
 
 body{
-  background: url(bg.jpg);
+  background: #fff;
   background-repeat: repeat;
 }
 .container{
-  width: 90%;
+  width: 1080px;
 }
 .box{
   background:#fff;
@@ -87,13 +98,11 @@ body{
   .btn:last-child,
   .btn:first-child,
   .btn-large{
-    padding: 11px 25px;
-    background: url(sprites.png);
+    padding: 15px 30px;
     border-radius: 0;
     border: none;
     text-transform: uppercase;
-    font-family: 'GothamMedium';
-    color: gray;
+    font-family: 'GothamLight';
     text-shadow: none;
     p{
       margin:0px;
@@ -121,11 +130,11 @@ body{
 }
 .btn-primary:hover{
   background-color: #fff;
-  color: #000;
+  color: #101010;
 }
 .simple-btn{
   border: none;
-  color: #000;
+  color: #101010;
   font: .8em/1em 'GothamMedium';
 }
 
@@ -156,6 +165,9 @@ body{
 
 /* PRODUCTS GRID */
 
+.collections{
+  padding-top:100px;
+}
 .collections .span3{
   .item{
     background: #FFF;
@@ -169,7 +181,7 @@ body{
       position: relative;
     }
     .over{
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.70);
       width: 100%;
       height: 100%;
       cursor: pointer;
@@ -186,14 +198,15 @@ body{
       padding:0;
     }
     h1{
-      font-size: 22px;
-      color:#606060;
+      font-size: 20px;
+      color:#101010;
       margin:125px 0 0 0;
       width: 100%
     }
     p{
-      font-size: 20px;
-      color:#303030;
+      font-family: 'GothamLight';
+      font-size: 18px;
+      color:#101010;
       margin:0px 0 0 0;
       width: 100%
     }
@@ -201,7 +214,7 @@ body{
       width:100%;
       margin:10px 0;
       padding:0;
-      color:#606060;
+      color:#101010;
     }
     .hr{
       width:10%;
@@ -219,38 +232,68 @@ body{
 /*
 HEADER
 */
-.btn-group.swift{
-  position: relative;
-  opacity: 0.9;
-  float: none;
+/* Buttons */
+.btn.btn-white{
+  background: #fff;
+  color:#101010;
+  padding:15px 30px;
+  border-radius: 0px;
+  border:0px;
+  font: 14px 'GothamLight', helvetica, arial, sans-serif;
+  box-shadow: none;
+  text-transform: uppercase;
 }
-.btn-group.swift.selectuser{
-  border:2px solid #fff;
-  position: relative;
-  opacity: 0.9;
-  float: none;
+.btn.btn-white:hover{
+  background: #101010;
   color:#fff;
-  opacity: 1;
-  display: inline-block;
-  margin-top:40px;
-  .btn{
-    background: none;
-    color:#fff;
-  }
-  .btn:hover{
-    background: #fff;
-    color:#333;
-  }
 }
-.btn-group{
-    position: relative;
-    float: right;
-    .btn{
+.btn.btn-black{
+  background: #101010;
+  color:#fff;
+  padding:15px 30px;
+  border-radius: 0px;
+  border:0px;
+  font: 14px 'GothamLight', helvetica, arial, sans-serif;
+  box-shadow: none;
+  text-transform: uppercase;
+}
+.btn.btn-black:hover{
+  background: #fff;
+  color:#101010;
+}
+.btn.btn-blackline{
+  background: transparent;
+  border:1px solid #101010;
+  color:#101010;
+  padding:15px 30px;
+  border-radius: 0px;
+  font: 14px 'GothamLight', helvetica, arial, sans-serif;
+  box-shadow: none;
+  text-transform: uppercase;
+}
+.btn.btn-blackline:hover{
+  background: #101010;
+  color:#fff;
+}
+.userbar{
+  display: none;
+  background: #f5f5f5;
+  ul{
+    list-style: none;
+    li{
+      float:left;
+      padding:5px 0 5px 10px;
       a{
-        font-size: .7em;
+        color:#404040;
+        background:none;
+      }
+      a:hover{
+        color:#808080;
+        background:none;
       }
     }
   }
+}
 .navbar-inner{
   .btn.btn-navbar{
     border-radius: 0px;
@@ -369,13 +412,8 @@ HEADER
     }
   }
 }
-.search-box{
-  height: 50px;
-  .btn{
-    margin: 1.5em 0 0 2em;
-  }
-}
 #header{
+  background-color:#101010;
   position: fixed;
   z-index: 9999;
   width:100%;
@@ -427,15 +465,16 @@ HEADER
     .nav > li:last-child{margin: 0;}
     .nav > li > a{
       padding: 4px 10px;
-      font: 11px 'GothamBold', helvetica, arial, sans-serif;
-      color: #fff;
+      font: 14px 'GothamBold', helvetica, arial, sans-serif;
+      color: #808080;
       text-shadow:none;
+      margin:2px 0 0 0;
     }
     .nav > li > a:hover{
-      color: #ccc;
+      color: #fff;
     }
     .nav > li.background--light > a{
-      color:#000;
+      color:#101010;
     }
     .nav > li.background--light > a:hover{
       color:#606060;
@@ -460,7 +499,7 @@ HEADER
 @mixin select($section){
   body.#{$section}{
     .nav .#{$section} a{
-      border-bottom: .6em solid #666;
+      color:#fff;
     }
   }
 }
@@ -473,17 +512,28 @@ HEADER
 FOOTER
 */
 #footer{
-  background: url(sprites.png);
+  background: #101010;
   width: 100%;
-  height: 50px;
   margin: 0px;
   margin-top: 5em;
-    h5{
+  padding:50px 0  50px 0;
+  h5{
     font-size: .7em;
     text-align: center;
     color: #666;
     top: 15px;
     position: relative;
+  }
+  h2{
+    font-size: 22px;
+  }
+  a, p{
+    font: 11px 'GothamLight', helvetica, arial, sans-serif;
+    color:#808080;
+    margin:5px 0;
+  }
+  a:hover{
+    color:#fff;
   }
 }
 /* Titulos & bloques */
@@ -497,10 +547,10 @@ FOOTER
   h5{
     font: italic 21px 'times new roman', times, georgia, serif;
     letter-spacing: 0pt;
-    padding:120px 0;
+    padding:80px 0;
     float:left;
     width:100%;
-    color:#808080;
+    color:#404040;
     text-align:center;
     text-transform: uppercase;
   }
@@ -521,9 +571,13 @@ FOOTER
     text-transform: uppercase;
   }
   p{
+    font-family:'GothamLight', helvetica, arial, sans-serif;
     padding:35px 25% 70px 25%;
     margin:0;
     font-size: 12px;
+    line-height:25px;
+    color:#101010;
+    letter-spacing: 0.2pt;
   }
   .hr{
     float: left;
@@ -552,15 +606,19 @@ FOOTER
     h1{
       font: 68px 'GothamBold', helvetica, arial, sans-serif;
       color:#fff;
-      padding:0px 0px 0px 0px;
+      padding:5px 0px 5px 0px;
       text-transform: uppercase;
+      margin:0;
     }
     h2{
       font: 24px 'GothamMedium', helvetica, arial, sans-serif;
       color:#fff;
-      padding:0px 0px 0px 0px;
+      padding:5px 0px 5px 0px;
       margin:0;
       text-transform: uppercase;
+    }
+    .btn.btn-white{
+      margin-top:25px;
     }
   }
 }
@@ -598,19 +656,20 @@ FOOTER
     }
   }
   h1{
-    margin:140px 0 0 0;
-    color: #303030;
-    font-size: 36px;
+    margin:110px 0 0 0;
+    color: #101010;
+    font-size: 42px;
+    letter-spacing:0.3pt;
   }
   p{
-    color:#606060;
+    color:#101010;
     margin:15px 0 20px 0;
     text-transform:none;
-    font: 12px/24px 'GothamMedium', helvetica, arial, sans-serif;
+    font: 14px/24px 'GothamLight', helvetica, arial, sans-serif;
   }
   .hr{
     width:10%;
-    margin:15px 45% 8px 45%;
+    margin:23px 45% 8px;
     background:#606060;
     height:2px;
   }
@@ -618,23 +677,22 @@ FOOTER
     box-shadow: none;
     background-color: transparent;
     background-image: none;
-    border: 2px solid #606060;
+    border: 0px;
     border-radius: 0;
-    color: #606060;
+    color: #101010;
     font-family: 'GothamMedium';
     padding: 10px 20px;
     text-shadow: none;
     text-transform: uppercase;
   }
   .btn-primary:hover{
-    background-color: #606060;
+    background-color: #101010;
     color: #fff;
   }
 }
 
 #home{
   background-image: url(homebg.jpg); 
-  padding-bottom:52%;
 }
 .info{
   font-size: 15px;
@@ -668,7 +726,7 @@ SIGN UP
   margin:2em auto 0;
   float:none;
   h2{
-    font: 1.750em 'GothamMedium', helvetica, arial, sans-serif;
+    font: 1.750em 'GothamBold', helvetica, arial, sans-serif;
     color: #808080;
   }
   input{
@@ -723,7 +781,7 @@ CART
     color: #808080;
   }
   h2{
-    font: 1.1em 'GothamMedium', helvetica, arial, sans-serif;
+    font: 1.1em 'GothamBold', helvetica, arial, sans-serif;
     color: #bbb;
   }
   p{
@@ -792,4 +850,36 @@ ORDER
   width:auto;
   text-align:left;
   color:#808080;
+}
+/*--------------------------------
+SLIDER
+--------------------------------*/
+.slider-info {
+  position: absolute;
+  width:50%;
+  height: 255px;
+  left: 0;
+  right: 0;
+  top: 50%;
+  padding: 25px;
+  margin: -125px auto 0;
+  background: transparent;
+  text-align: center;
+  h1{
+    font: 120px 'GothamMedium',helvetica,arial,sans-serif;
+    color: #FFFFFF;
+    margin: 20px 0;
+  }
+  h6{
+    font: 18px 'GothamMedium',helvetica,arial,sans-serif;
+    letter-spacing: 6pt;
+    color: #FFFFFF;
+    margin: 18px 0 15px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .carousel-caption.designer {
+    background: transparent;
+  }
 }
